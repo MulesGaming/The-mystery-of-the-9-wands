@@ -151,6 +151,8 @@ execute if score @a[limit=1] slime_cont matches 1.. run function mystery_9_wands
 ### Slime wand right click
 
 execute if entity @p[scores={slime_wand=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{slimewand:1b,CustomModelData:210465}}}] run execute as @p run function mystery_9_wands:summon_slimes
+execute if score time slime_wand_timer matches ..1 run function mystery_9_wands:reset_slime
+execute if score time slime_wand_timer matches 1.. run title @a actionbar ["","Undead wand is on cool down with ",{"score":{"name":"time","objective":"slime_wand_timer"}}," seconds left"]
 
 ### Slime wand reset
 
@@ -174,3 +176,21 @@ execute at @e[type=marker,tag=rooftop_start] if entity @a[distance=..2] run func
 execute at @e[type=marker,tag=rooftop_fail] if entity @a[distance=..2] run function mystery_9_wands:fail_rooftop_chase
 
 execute at @e[type=zombie,tag=ninjathief] if entity @a[distance=..2] run function mystery_9_wands:finish_rooftop_chase
+
+### Speed wand right click
+
+execute if entity @p[scores={speed_wand=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{speedwand:1b,CustomModelData:643978}}}] run execute as @p run effect give @p speed 30 2 true
+
+### Speed wand reset
+
+scoreboard players remove @a[scores={speed_wand=1..}] speed_wand 1
+
+### Undead wand right click
+
+execute if score time undead_wand_timer matches ..1 run execute if entity @p[scores={undead_wand=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{undeadwand:1b,CustomModelData:798893}}}] run execute as @p run execute at @a run function mystery_9_wands:summon_undead
+execute if score time undead_wand_timer matches ..1 run function mystery_9_wands:reset_undead
+execute if score time undead_wand_timer matches 1.. run title @a actionbar ["","Undead wand is on cool down with ",{"score":{"name":"time","objective":"undead_wand_timer"}}," seconds left"]
+
+### Undead wand reset
+
+scoreboard players remove @a[scores={undead_wand=1..}] undead_wand 1

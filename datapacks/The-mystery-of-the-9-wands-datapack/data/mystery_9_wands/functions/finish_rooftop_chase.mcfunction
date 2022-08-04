@@ -14,3 +14,8 @@ effect clear @a slowness
 ### Tp player back
 
 tp @a 11.3 -59.5 94.9
+
+### Remove ninja thief
+
+tp @e[type=zombie,tag=ninjathief] ~ ~-100 ~
+kill @e[type=zombie,tag=ninjathief]

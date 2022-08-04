@@ -2,6 +2,10 @@
 
 tellraw @a "The minecart is ready"
 
+### Destroy old cart
+
+kill @e[type=minecart]
+
 ### Tp to cart
 
 tp @a -20.3 -59.5 77.4

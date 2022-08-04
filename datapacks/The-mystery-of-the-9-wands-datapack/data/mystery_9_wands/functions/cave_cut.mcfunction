@@ -24,5 +24,6 @@ schedule function mystery_9_wands:kill_cave_skely 7s
 
 ### Bomb_chest
 
-setblock -23 -60 144 chest
+setblock -23 -60 144 chest destroy
+kill @e[type=item,nbt={Item:{id:"minecraft:chest",Count:1b}}]
 function mystery_9_wands:bomb/menu/update

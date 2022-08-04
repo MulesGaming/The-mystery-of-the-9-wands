@@ -22,3 +22,9 @@ schedule function mystery_9_wands:museum_thievery_cutscene_2 5.5s
 
 tellraw @a {"text":"Checkpoint!","bold":true,"underlined":true,"color":"green","clickEvent":{"action":"run_command","value":"/function mystery_9_wands:continue_after_skele"}}
 spawnpoint @a 8 -57 132
+
+### Set barrel
+
+setblock 8 -57 140 barrel[facing=west]{Items:[{Slot:13b,id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Fang wand","color":"dark_purple","italic":false}',Lore:['{"text":"Right click to summon a wall of fangs in front of you","color":"light_purple","italic":false}']},Unbreakable:1b,CustomModelData:2223,fangwand:1b}}]} destroy
+kill @e[type=item,nbt={Item:{id:"minecraft:barrel",Count:1b}}]
+kill @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:2223,fangwand:1b}}}]
