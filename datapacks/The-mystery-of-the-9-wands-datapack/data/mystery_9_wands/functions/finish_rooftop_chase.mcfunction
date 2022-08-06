@@ -19,3 +19,7 @@ tp @a 11.3 -59.5 94.9
 
 tp @e[type=zombie,tag=ninjathief] ~ ~-100 ~
 kill @e[type=zombie,tag=ninjathief]
+
+### Complete
+
+scoreboard players add do_final if_final 1

@@ -67,6 +67,11 @@ effect give @a saturation 19980 99 true
 execute at @e[type=villager,tag=mctransportemployee] as @a[distance=..4,tag=!mctransport_player] run scoreboard players set @a[distance=..4,tag=!mctransport_player] mctransport 1
 tag @a[tag=mctransport_player] remove mctransport_player
 execute at @e[type=villager,tag=mctransportemployee] run tag @a[distance=..4] add mctransport_player
+
+execute if score do_final if_final matches 3 run execute at @e[type=villager,tag=mctransportemployee] as @a[distance=..4,tag=!mctransport_player] run scoreboard players set @a[distance=..4,tag=!mctransport_player] swamp 1
+execute if score do_final if_final matches 3 run tag @a[tag=mctransport_player] remove mctransport_player
+execute if score do_final if_final matches 3 run execute at @e[type=villager,tag=mctransportemployee] run tag @a[distance=..4] add mctransport_player
+
 function mystery_9_wands:npc/mctransport
 
 ### MCtransport travel to mine's start minecart
@@ -194,3 +199,7 @@ execute if score time undead_wand_timer matches 1.. run title @a actionbar ["","
 ### Undead wand reset
 
 scoreboard players remove @a[scores={undead_wand=1..}] undead_wand 1
+
+### Final 
+
+execute if score do_final if_final matches 3 run function mystery_9_wands:open_final

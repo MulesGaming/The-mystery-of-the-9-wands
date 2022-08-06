@@ -30,5 +30,6 @@ schedule function mystery_9_wands:cont_after_slime_clearup 1s
 
 item replace entity @p weapon.offhand with compass{display:{Name:'{"text":"Destination Compass","color":"white","italic":false}',Lore:['{"text":"This compass points towards your next destination","color":"yellow","italic":false}']},HideFlags:5,Unbreakable:1b,LodestoneDimension:"minecraft:overworld",LodestoneTracked:1b,LodestonePos:{X:10,Y:-62,Z:95}}
 
+### Complete
 
-
+scoreboard players add do_final if_final 1

@@ -14,3 +14,7 @@ scoreboard players set message mail 1
 ### Sewer open
 
 function mystery_9_wands:open_sewer
+
+### Complete
+
+scoreboard players add do_final if_final 1

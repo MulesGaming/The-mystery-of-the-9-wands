@@ -119,3 +119,13 @@ tellraw @a ["","Welcome to the mystery of the 9 wands!","\n",{"text":"GitHub","b
 ### Replace artifacs
 
 function mystery_9_wands:replace_lost_staue_bits
+
+### If do Final
+
+scoreboard objectives add if_final dummy
+scoreboard objectives add swamp dummy
+
+### Remove lost statue bits extras
+
+kill @e[type=item,nbt={Item:{id:"minecraft:gold_block",Count:1b,tag:{display:{Name:'{"text":"Lost statue bit","italic":false}'}}}}]
+kill @e[type=item,nbt={Item:{id:"minecraft:item_frame",Count:1b}}]
