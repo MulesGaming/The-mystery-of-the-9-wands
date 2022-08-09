@@ -11,6 +11,7 @@ execute as @e[type=!player] at @s if block ~ ~-1.5 ~ purpur_stairs[facing=east] 
 execute as @e[type=!player] at @s if block ~ ~-1.5 ~ purpur_stairs[facing=north] run tp @s ~ ~ ~-.125 180 0
 execute as @e[type=!player] at @s if block ~ ~-1.5 ~ purpur_stairs[facing=west] run tp @s ~-.125 ~ ~ 90 0
 execute as @e[type=!player] at @s if block ~ ~-1.5 ~ purpur_stairs[facing=south] run tp @s ~ ~ ~.125 0 0
+
 ### Rotate mobs when on end stone stairs
 
 function mystery_9_wands:rotate_mobs

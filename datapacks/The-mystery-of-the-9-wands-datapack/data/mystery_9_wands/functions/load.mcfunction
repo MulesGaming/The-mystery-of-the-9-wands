@@ -11,6 +11,7 @@ scoreboard objectives add thievery_cut dummy
 scoreboard objectives add cave_cut dummy
 scoreboard objectives add skele_cut dummy
 scoreboard objectives add slime_boss_movment dummy
+scoreboard objectives add guardian_cut dummy
 
 ### Triggers
 

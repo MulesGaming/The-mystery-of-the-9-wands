@@ -35,6 +35,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "in_water": "2022-08-08 14:04:01 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/tools/compass": {
     "criteria": {
       "has_redstone": "2022-08-06 14:52:53 -0500"
@@ -47,11 +53,23 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/activator_rail": {
+    "criteria": {
+      "has_rail": "2022-08-08 13:54:51 -0500"
+    },
+    "done": true
+  },
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
       "minecraft:skeleton": "2022-08-03 19:45:44 -0500"
     },
     "done": false
+  },
+  "minecraft:recipes/transportation/detector_rail": {
+    "criteria": {
+      "has_rail": "2022-08-08 13:54:51 -0500"
+    },
+    "done": true
   },
   "minecraft:story/obtain_armor": {
     "criteria": {
@@ -107,6 +125,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/brewing/cauldron": {
+    "criteria": {
+      "has_water_bucket": "2022-08-08 14:01:13 -0500"
+    },
+    "done": true
+  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:plains": "2022-08-03 18:53:32 -0500"
@@ -149,6 +173,18 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2022-08-08 14:00:57 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "in_water": "2022-08-08 14:04:01 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/note_block": {
     "criteria": {
       "has_redstone": "2022-08-06 14:52:53 -0500"
@@ -158,6 +194,24 @@
   "mystery_9_wands:root": {
     "criteria": {
       "tick": "2022-08-03 18:53:31 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/mangrove_boat": {
+    "criteria": {
+      "in_water": "2022-08-08 14:04:01 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/powered_rail": {
+    "criteria": {
+      "has_rail": "2022-08-08 13:54:51 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "in_water": "2022-08-08 14:04:01 -0500"
     },
     "done": true
   },
@@ -173,6 +227,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/oak_boat": {
+    "criteria": {
+      "in_water": "2022-08-08 14:04:01 -0500"
+    },
+    "done": true
+  },
   "vanillatweaks:armor_statues": {
     "criteria": {
       "tick": "2022-08-03 18:53:31 -0500"
@@ -185,9 +245,33 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/white_dye": {
+    "criteria": {
+      "has_bone_meal": "2022-08-08 14:01:17 -0500"
+    },
+    "done": true
+  },
   "minecraft:adventure/root": {
     "criteria": {
       "killed_something": "2022-08-03 19:10:57 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "in_water": "2022-08-08 14:04:01 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "in_water": "2022-08-08 14:04:01 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bone_block": {
+    "criteria": {
+      "has_bone_meal": "2022-08-08 14:01:17 -0500"
     },
     "done": true
   },
