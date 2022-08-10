@@ -41,6 +41,10 @@ scoreboard objectives add undead_wand minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add undead_wand_timer dummy
 schedule function mystery_9_wands:undead_timer_downone 1s
 schedule function mystery_9_wands:slime_timer_downone 1s
+scoreboard objectives add water_wand minecraft.used:minecraft.carrot_on_a_stick
+scoreboard objectives add flame_wand minecraft.used:minecraft.carrot_on_a_stick
+scoreboard objectives add void_wand minecraft.used:minecraft.carrot_on_a_stick
+scoreboard objectives add cat_wand minecraft.used:minecraft.carrot_on_a_stick
 
 ### MCTransport
 

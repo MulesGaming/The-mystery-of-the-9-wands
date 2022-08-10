@@ -61,7 +61,7 @@ scoreboard players remove @a[scores={fang_wand=1..}] fang_wand 1
 
 ### Sataration
 
-effect give @a saturation 19980 99 true
+effect give @a saturation 999999 99 true
 
 ### MCtransport employee
 
@@ -204,3 +204,27 @@ scoreboard players remove @a[scores={undead_wand=1..}] undead_wand 1
 ### Final 
 
 execute if score do_final if_final matches 3 run function mystery_9_wands:open_final
+
+### Water wand right click
+
+execute if entity @p[scores={water_wand=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{waterwand:1b,CustomModelData:967854}}}] run execute as @p run execute at @a run function mystery_9_wands:give_water_effects
+
+### Water wand reset
+
+scoreboard players remove @a[scores={water_wand=1..}] water_wand 1
+
+### Fire wand right click
+
+execute if entity @p[scores={flame_wand=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{firewand:1b,CustomModelData:986694}}}] run execute as @p run execute at @a run function mystery_9_wands:summon_fire
+
+### Fire wand reset
+
+scoreboard players remove @a[scores={flame_wand=1..}] flame_wand 1
+
+### Orb wand right click
+
+execute if entity @p[scores={cat_wand=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{catwand:1b,CustomModelData:2373578}}}] run execute as @p run function mystery_9_wands:summon_cat
+
+### Orb wand reset
+
+scoreboard players remove @a[scores={cat_wand=1..}] cat_wand 1
