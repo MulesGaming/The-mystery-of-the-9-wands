@@ -4,4 +4,4 @@ give @p salmon{display:{Name:'{"text":"Tame your cat.","italic":false,"underline
 
 ### Sumon cat
 
-summon cat ~ ~ ~ {DeathLootTable:"mystery_9_wands:entities/blank_loottable",Team:"BaseTeam",variant:"jellie"}
+execute at @a run summon cat ~ ~ ~ {DeathLootTable:"mystery_9_wands:entities/blank_loottable",Team:"BaseTeam"}

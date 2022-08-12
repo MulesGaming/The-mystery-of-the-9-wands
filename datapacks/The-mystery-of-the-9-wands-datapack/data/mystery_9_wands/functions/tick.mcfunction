@@ -151,7 +151,7 @@ function mystery_9_wands:slime_king_bossbar
 ### Slime continue
 
 data modify entity @e[type=slime,name="Slime King",nbt={Size:0},limit=1] DeathLootTable set value continue_slime
-execute store result score @a[limit=1] slime_cont run clear @a pearlescent_froglight{continue_after_slime:1b} 0
+execute store result score @a[limit=1] slime_cont run clear @a cyan_wool{continue_after_slime:1b} 0
 execute if score @a[limit=1] slime_cont matches 1.. run function mystery_9_wands:cont_after_slime
 
 ### Slime wand right click
@@ -221,10 +221,19 @@ execute if entity @p[scores={flame_wand=1..},nbt={SelectedItem:{id:"minecraft:ca
 
 scoreboard players remove @a[scores={flame_wand=1..}] flame_wand 1
 
-### Orb wand right click
+### Cat wand right click
 
 execute if entity @p[scores={cat_wand=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{catwand:1b,CustomModelData:2373578}}}] run execute as @p run function mystery_9_wands:summon_cat
 
-### Orb wand reset
+### Cat wand reset
 
 scoreboard players remove @a[scores={cat_wand=1..}] cat_wand 1
+
+### Close gaurdion boss 
+
+setblock -196 -63 85 barrier
+
+### Guardian cont
+
+execute store result score @a[limit=1] cont_after_guardian run clear @a cyan_wool{cont_after_guardian:1b} 0
+execute if score @a[limit=1] cont_after_guardian matches 1.. run function mystery_9_wands:cont_after_guardian

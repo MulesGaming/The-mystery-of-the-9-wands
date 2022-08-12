@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:pearlescent_froglight",
+          "name": "minecraft:cyan_wool ",
           "functions": [
             {
               "function": "minecraft:set_nbt",

@@ -134,3 +134,28 @@ scoreboard objectives add swamp dummy
 
 kill @e[type=item,nbt={Item:{id:"minecraft:gold_block",Count:1b,tag:{display:{Name:'{"text":"Lost statue bit","italic":false}'}}}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:item_frame",Count:1b}}]
+
+### Cat kidnapper
+
+kill @e[type=marker,tag=cat_kidnapper_start]
+summon marker -175.245 -60 143.65 {Tags:["cat_kidnapper_start"]}
+
+kill @e[type=cat,tag=imprisoned_cat]
+summon cat -172.3 60 149.3 {Tags:["imprisoned_cat"]}
+summon cat -172.3 -60 149.3 {Tags:["imprisoned_cat"]}
+summon cat -173.73 -60 144 {Tags:["imprisoned_cat"]}
+summon cat -173.73 -60 144 {Tags:["imprisoned_cat"]}
+
+### Guardian bossbar
+
+function mystery_9_wands:guardian_bossbar
+bossbar add guardian_boss "Munitnt Guardian"
+
+### Fill in hole
+
+setblock -196 -63 85 barrier
+
+### Cont after Guardian
+
+scoreboard objectives add cont_after_guardian dummy
+
