@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cyan_wool",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{continue_after_slime:1b}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:carrot_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Slime Wand\",\"color\":\"dark_green\",\"italic\":false}',Lore:['{\"text\":\"Right click to summon 4 slimes that protect you.\",\"color\":\"dark_purple\",\"italic\":false}']},Unbreakable:1b,CustomModelData:210465,slimewand:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

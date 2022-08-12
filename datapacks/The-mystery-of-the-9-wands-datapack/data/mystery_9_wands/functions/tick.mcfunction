@@ -229,11 +229,14 @@ execute if entity @p[scores={cat_wand=1..},nbt={SelectedItem:{id:"minecraft:carr
 
 scoreboard players remove @a[scores={cat_wand=1..}] cat_wand 1
 
-### Close gaurdion boss 
-
-setblock -196 -63 85 barrier
-
 ### Guardian cont
 
 execute store result score @a[limit=1] cont_after_guardian run clear @a cyan_wool{cont_after_guardian:1b} 0
 execute if score @a[limit=1] cont_after_guardian matches 1.. run function mystery_9_wands:cont_after_guardian
+
+### Guardian bossbar
+
+function mystery_9_wands:guardian_bossbar
+
+
+

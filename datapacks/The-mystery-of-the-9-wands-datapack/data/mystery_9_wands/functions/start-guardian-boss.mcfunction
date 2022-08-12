@@ -1,7 +1,3 @@
-### Disable movement
-
-scoreboard players set @a guardian_cut 1
-
 ### Text
 
 tellraw @a ["","<",{"text":"Mutant Guardian","color":"gold"},"> ","DIE DIE DIE DIE DIE ",{"selector":"@p","color":"gold"}," DIE DIE DIE!"]
