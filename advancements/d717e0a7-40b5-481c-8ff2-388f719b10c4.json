@@ -125,6 +125,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/book": {
+    "criteria": {
+      "has_paper": "2022-08-15 11:52:05 -0500"
+    },
+    "done": true
+  },
   "armor_statues:enable": {
     "criteria": {
       "tick": "2022-08-03 18:53:31 -0500"
@@ -309,6 +315,7 @@
     "criteria": {
       "minecraft:skeleton": "2022-08-03 19:45:44 -0500",
       "minecraft:elder_guardian": "2022-08-12 11:03:25 -0500",
+      "minecraft:vindicator": "2022-08-15 12:01:45 -0500",
       "minecraft:evoker": "2022-08-12 11:11:55 -0500"
     },
     "done": false
@@ -394,6 +401,12 @@
   "minecraft:recipes/building_blocks/brick_slab_from_bricks_stonecutting": {
     "criteria": {
       "has_bricks": "2022-08-11 13:00:17 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cartography_table": {
+    "criteria": {
+      "has_paper": "2022-08-15 11:52:05 -0500"
     },
     "done": true
   },

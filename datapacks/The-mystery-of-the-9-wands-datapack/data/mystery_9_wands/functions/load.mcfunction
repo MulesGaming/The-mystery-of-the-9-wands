@@ -11,6 +11,7 @@ scoreboard objectives add thievery_cut dummy
 scoreboard objectives add cave_cut dummy
 scoreboard objectives add skele_cut dummy
 scoreboard objectives add slime_boss_movment dummy
+scoreboard objectives add catnapper_movment dummy
 
 ### Triggers
 
@@ -134,16 +135,16 @@ scoreboard objectives add swamp dummy
 kill @e[type=item,nbt={Item:{id:"minecraft:gold_block",Count:1b,tag:{display:{Name:'{"text":"Lost statue bit","italic":false}'}}}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:item_frame",Count:1b}}]
 
-### Cat kidnapper
+### Cat kidnapped
 
 kill @e[type=marker,tag=cat_kidnapper_start]
 summon marker -175.245 -60 143.65 {Tags:["cat_kidnapper_start"]}
 
 kill @e[type=cat,tag=imprisoned_cat]
-summon cat -172.3 60 149.3 {Tags:["imprisoned_cat"]}
-summon cat -172.3 -60 149.3 {Tags:["imprisoned_cat"]}
-summon cat -173.73 -60 144 {Tags:["imprisoned_cat"]}
-summon cat -173.73 -60 144 {Tags:["imprisoned_cat"]}
+summon cat -172.3 -59 149.3 {DeathLootTable:"mystery_9_wands:entities/blank_loottable",Tags:["imprisoned_cat"]}
+summon cat -172.3 -59 149.3 {DeathLootTable:"mystery_9_wands:entities/blank_loottable",Tags:["imprisoned_cat"]}
+summon cat -173.73 -59 144 {DeathLootTable:"mystery_9_wands:entities/blank_loottable",Tags:["imprisoned_cat"]}
+summon cat -173.73 -59 144 {DeathLootTable:"mystery_9_wands:entities/blank_loottable",Tags:["imprisoned_cat"]}
 
 ### Guardian bossbar
 
@@ -161,3 +162,28 @@ scoreboard objectives add cont_after_guardian dummy
 ### Close gaurdion boss 
 
 setblock -196 -63 85 barrier
+
+### Catnapper 
+
+summon marker -176.38 -60 144.3 {Tags:["catnapper"]}
+kill @e[type=vindicator,tag=catnapper_cut]
+kill @e[type=vindicator,tag=catnapper]
+
+### Resourse pack enabled
+
+summon item_frame 74 -58 -18 {Facing:2b,Invulnerable:1b,Invisible:1b,Tags:["resoursepacktest"],Item:{id:"minecraft:paper",Count:1b,tag:{CustomModelData:874336}}}
+summon item_frame 74 -58 -35 {Facing:3b,Invulnerable:1b,Invisible:1b,Tags:["resoursepacktest"],Item:{id:"minecraft:paper",Count:1b,tag:{CustomModelData:874336}}}
+setblock 74 -57 -18 minecraft:oak_wall_sign[facing=north,waterlogged=false]{Color:"black",GlowingText:1b,Text1:'{"bold":true,"color":"dark_green","text":"Is there a "}',Text2:'{"bold":true,"color":"dark_green","text":"checkmark?"}',Text3:'{"bold":true,"color":"dark_green","clickEvent":{"action":"run_command","value":"/tellraw @p [\\"\\",{\\"text\\":\\"Recourse pack download instructions(if its not automatically installed):\\",\\"bold\\":true,\\"color\\":\\"dark_blue\\"},\\"\\\\n\\",\\"\\\\n\\",{\\"text\\":\\"Click here\\",\\"underlined\\":true,\\"color\\":\\"dark_gray\\",\\"clickEvent\\":{\\"action\\":\\"open_url\\",\\"value\\":\\"https://github.com/MulesGaming/The-mystery-of-the-9-wands/releases/\\"}},{\\"text\\":\\" or go to \\",\\"color\\":\\"dark_gray\\"},{\\"text\\":\\"github.com/MulesGaming/The-mystery-of-the-9-wands/releases/\\",\\"bold\\":true,\\"color\\":\\"dark_gray\\",\\"clickEvent\\":{\\"action\\":\\"open_url\\",\\"value\\":\\"github.com/MulesGaming/The-mystery-of-the-9-wands/releases/\\"}},{\\"text\\":\\" and click on the latest release. \\",\\"color\\":\\"dark_gray\\"},{\\"text\\":\\"Go to \\\\\\"Assets\\\\\\" the download the file named mystery-9-wands-rp.zip and open in folder. \\",\\"color\\":\\"dark_gray\\"},{\\"text\\":\\"Now pause Minecraft, go to options, Recourse packs, Open Pack Folder. Now drag Mystery-9-wands-rp.zip in the Recourse pack folder. In Minecraft it should now appear under Available and if you hover over it and click the play button it will enable!\\",\\"color\\":\\"dark_gray\\"}]"},"text":"If not click me!"}',Text4:'{"text":""}'}
+setblock 74 -57 -35 minecraft:oak_wall_sign[facing=south,waterlogged=false]{Color:"black",GlowingText:1b,Text1:'{"bold":true,"color":"dark_green","text":"Is there a "}',Text2:'{"bold":true,"color":"dark_green","text":"checkmark?"}',Text3:'{"bold":true,"color":"dark_green","clickEvent":{"action":"run_command","value":"/tellraw @p [\\"\\",{\\"text\\":\\"Recourse pack download instructions(if its not automatically installed):\\",\\"bold\\":true,\\"color\\":\\"dark_blue\\"},\\"\\\\n\\",\\"\\\\n\\",{\\"text\\":\\"Click here\\",\\"underlined\\":true,\\"color\\":\\"dark_gray\\",\\"clickEvent\\":{\\"action\\":\\"open_url\\",\\"value\\":\\"https://github.com/MulesGaming/The-mystery-of-the-9-wands/releases/\\"}},{\\"text\\":\\" or go to \\",\\"color\\":\\"dark_gray\\"},{\\"text\\":\\"github.com/MulesGaming/The-mystery-of-the-9-wands/releases/\\",\\"bold\\":true,\\"color\\":\\"dark_gray\\",\\"clickEvent\\":{\\"action\\":\\"open_url\\",\\"value\\":\\"github.com/MulesGaming/The-mystery-of-the-9-wands/releases/\\"}},{\\"text\\":\\" and click on the latest release. \\",\\"color\\":\\"dark_gray\\"},{\\"text\\":\\"Go to \\\\\\"Assets\\\\\\" the download the file named mystery-9-wands-rp.zip and open in folder. \\",\\"color\\":\\"dark_gray\\"},{\\"text\\":\\"Now pause Minecraft, go to options, Recourse packs, Open Pack Folder. Now drag Mystery-9-wands-rp.zip in the Recourse pack folder. In Minecraft it should now appear under Available and if you hover over it and click the play button it will enable!\\",\\"color\\":\\"dark_gray\\"}]"},"text":"If not click me!"}',Text4:'{"text":""}'}
+
+### Catnapper continue
+
+scoreboard objectives add cont_after_catnappers dummy
+
+### UnFree cats
+
+setblock -175 -59 13 iron_bars
+setblock -175 -59 144 iron_bars
+
+setblock -174 -59 148 iron_bars
+setblock -174 -59 148 iron_bars

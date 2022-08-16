@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:cyan_wool",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{continue_after_catnapper:1b}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:carrot_on_a_stick",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{display:{Name:'{\"text\":\"Cat wand\",\"color\":\"light_purple\",\"italic\":false}',Lore:['{\"text\":\"Right click to summon a cat and fish!\",\"italic\":false}']},Unbreakable:1b,CustomModelData:2373578,catwand:1b}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -238,5 +238,11 @@ execute if score @a[limit=1] cont_after_guardian matches 1.. run function myster
 
 function mystery_9_wands:guardian_bossbar
 
+### Cat kidnapper
 
+execute at @e[type=marker,tag=catnapper] if entity @p[distance=..2] run function mystery_9_wands:start_catnapper
 
+### Cont after cat
+
+execute store result score @a[limit=1] cont_after_catnappers run clear @a cyan_wool{continue_after_catnapper:1b} 0
+execute if score @a[limit=1] cont_after_catnappers matches 1.. run function mystery_9_wands:cont_after_catnapper

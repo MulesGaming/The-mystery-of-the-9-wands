@@ -6,4 +6,4 @@ execute as @a if score @p mctransport matches 1 run scoreboard players set @p mc
 ### Swamp
 
 execute at @e[type=villager,tag=mctransportemployee] run tellraw @a[scores={swamp=1}] [{"text":"Where would you like to go?","color":"green"},"\n"," ",{"text":"The swamp","underlined":true,"color":"dark_green","clickEvent":{"action":"run_command","value":"/function mystery_9_wands:ride_to_swamp"}}]
-execute as @a if score @p swamp matches 1 run scoreboard players set @p swamp 0
+execute as @a if score open swamp matches 1 run scoreboard players set @p swamp 0
