@@ -187,3 +187,23 @@ setblock -175 -59 144 iron_bars
 
 setblock -174 -59 148 iron_bars
 setblock -174 -59 148 iron_bars
+
+### Fix carnapper wall wall
+
+setblock -177 -61 151 air
+setblock -177 -62 151 air
+setblock -176 -61 151 air
+setblock -176 -62 151 air
+
+setblock -177 -60 151 mud_bricks
+setblock -177 -59 151 mud_bricks
+setblock -176 -60 151 mud_bricks
+setblock -176 -59 151 mud_bricks
+
+### Puzzel 
+
+summon armor_stand -176 -59 157 {CustomNameVisible:1b,Invisible:1b,Tags:["puzzle"],CustomName:'[{"text":"Whats ","color":"black"},{"text":"Red ","color":"red"},{"text":"White ","color":"white"},{"text":"and ","color":"black"},{"text":"Black all over?","color":"black"}]'}
+scoreboard objectives add puzzle dummy
+
+
+

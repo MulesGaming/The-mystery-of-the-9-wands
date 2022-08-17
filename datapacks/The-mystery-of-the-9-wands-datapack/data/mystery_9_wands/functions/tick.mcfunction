@@ -160,6 +160,7 @@ execute if entity @p[scores={slime_wand=1..},nbt={SelectedItem:{id:"minecraft:ca
 execute if score time slime_wand_timer matches ..1 run function mystery_9_wands:reset_slime
 execute if score time slime_wand_timer matches 1.. run title @a actionbar ["","Undead wand is on cool down with ",{"score":{"name":"time","objective":"slime_wand_timer"}}," seconds left"]
 
+
 ### Slime wand reset
 
 scoreboard players remove @a[scores={slime_wand=1..}] slime_wand 1
@@ -246,3 +247,26 @@ execute at @e[type=marker,tag=catnapper] if entity @p[distance=..2] run function
 
 execute store result score @a[limit=1] cont_after_catnappers run clear @a cyan_wool{continue_after_catnapper:1b} 0
 execute if score @a[limit=1] cont_after_catnappers matches 1.. run function mystery_9_wands:cont_after_catnapper
+
+### Puzzle start
+
+execute at @e[type=area_effect_cloud,tag=puzzle] as @a[distance=..1,tag=!puzzle_player] run scoreboard players set @a[distance=..1,tag=!puzzle_player] puzzle 1
+tag @a[tag=skele_continue_player] remove skele_continue
+execute at @e[type=minecraft:area_effect_cloud,tag=puzzle] run tag @a[distance=..1] add puzzle_player
+execute at @e[type=area_effect_cloud,tag=puzzle] run function mystery_9_wands:puzzle_start
+execute as @a if score @p puzzle matches 1 run scoreboard players set @p puzzle 0
+
+### Puzzle completed
+
+execute store result score done puzzle run clear @a paper{display:{Name:'{"text":"A sun burned zebra","italic":true}'},puzzle:1b} 0
+execute store result score done puzzle run clear @a paper{display:{Name:'{"text":"A sun burned zebra!","italic":true}'},puzzle:1b} 0
+execute store result score done puzzle run clear @a paper{display:{Name:'{"text":"A sun burned Zebra","italic":true}'},puzzle:1b} 0
+execute store result score done puzzle run clear @a paper{display:{Name:'{"text":"A sun burned Zebra!","italic":true}'},puzzle:1b} 0
+execute store result score done puzzle run clear @a paper{display:{Name:'{"text":"sun burned Zebra","italic":true}'},puzzle:1b} 0
+execute store result score done puzzle run clear @a paper{display:{Name:'{"text":"sun burned zebra","italic":true}'},puzzle:1b} 0
+
+### Puzzle failed
+
+execute store result score fail puzzle run clear @a paper{display:{Name:'{"text":"A sun burned Zebra","italic":true}'},puzzle:1b} 0
+
+
