@@ -1,10 +1,10 @@
-### Message
+### Check for answers on
 
-tellraw @a[scores={puzzle=1}] ["","What is ",{"text":"Red ","color":"red"},{"text":"White ","color":"white"},"and ",{"text":"Black ","color":"black"},"all over?","\n","Rename the piece of paper to you're answer!"]
+scoreboard players set on puzzle-on-off 1
 
 ### Give paper
 
-give @a paper{puzzle:1b,display:{Name:'{"text":"Rename this paper to you\'re answer."}',Lore:['{"text":"Rename this piece of paprt to you answer to the riddle:  "}','[{"text":"What\'s "},{"text":"Red ","color":"red"},{"text":"White ","color":"white"},{"text":"and "},{"text":"Black","color":"black"},{"text":" all over?"}]']}} 1
+give @a paper{puzzle:1b,display:{Name:'{"text":"Rename this paper to you\'re answer."}',Lore:['{"text":"Rename this piece of paper to you answer to the riddle:  "}','[{"text":"What\'s "},{"text":"Red ","color":"red"},{"text":"White ","color":"white"},{"text":"and "},{"text":"Black","color":"black"},{"text":" all over?"}]']}} 1
 
 ### Make anvil
 

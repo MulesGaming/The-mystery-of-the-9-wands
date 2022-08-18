@@ -1,6 +1,17 @@
 {
     "pack": {
-        "pack_format": 10,
-        "description": "The data pack for the mystery of the 9 wands adventure map."
+      "pack_format": 10,
+      "description": {
+        "text": "Datapack for ",
+        "color": "yellow",
+        "extra": [
+          {
+            "text": "The Mystery of the 9 wands!",
+            "color": "yellow",
+            "bold": true
+          }
+        ]
+      }
     }
-}
+  }
+  

@@ -200,10 +200,11 @@ setblock -177 -59 151 mud_bricks
 setblock -176 -60 151 mud_bricks
 setblock -176 -59 151 mud_bricks
 
-### Puzzel 
+### Puzzle
 
 summon armor_stand -176 -59 157 {CustomNameVisible:1b,Invisible:1b,Tags:["puzzle"],CustomName:'[{"text":"Whats ","color":"black"},{"text":"Red ","color":"red"},{"text":"White ","color":"white"},{"text":"and ","color":"black"},{"text":"Black all over?","color":"black"}]'}
 scoreboard objectives add puzzle dummy
-
+scoreboard objectives add puzzle-on-off dummy
+scoreboard players set on puzzle-on-off 0
 
 
