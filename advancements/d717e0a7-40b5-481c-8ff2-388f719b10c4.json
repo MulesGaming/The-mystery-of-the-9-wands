@@ -131,12 +131,6 @@
     },
     "done": true
   },
-  "armor_statues:enable": {
-    "criteria": {
-      "tick": "2022-08-03 18:53:31 -0500"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/cyan_carpet": {
     "criteria": {
       "has_cyan_wool": "2022-08-12 11:17:59 -0500"
@@ -212,12 +206,6 @@
   "minecraft:recipes/decorations/cyan_bed": {
     "criteria": {
       "has_cyan_wool": "2022-08-12 11:17:59 -0500"
-    },
-    "done": true
-  },
-  "vanillatweaks:armor_statues": {
-    "criteria": {
-      "tick": "2022-08-03 18:53:31 -0500"
     },
     "done": true
   },
@@ -389,12 +377,6 @@
   "minecraft:recipes/decorations/brick_wall_from_bricks_stonecutting": {
     "criteria": {
       "has_bricks": "2022-08-11 13:00:17 -0500"
-    },
-    "done": true
-  },
-  "vanillatweaks:root": {
-    "criteria": {
-      "tick": "2022-08-03 18:53:31 -0500"
     },
     "done": true
   },
