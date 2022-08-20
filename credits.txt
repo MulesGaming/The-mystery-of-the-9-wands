@@ -1,0 +1,8 @@
+--- Credits --- 
+
+-Mules Gaming - Developer: mulesgaming.github.io
+
+-Websites that helped with development:
+Vanilla Tweaks(Armor statues datapack): https://vanillatweaks.net/
+MCStacker: https://mcstacker.net/
+Minecraft Json: https://www.minecraftjson.com/

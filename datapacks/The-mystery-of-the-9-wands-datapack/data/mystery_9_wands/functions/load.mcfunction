@@ -12,6 +12,7 @@ scoreboard objectives add cave_cut dummy
 scoreboard objectives add skele_cut dummy
 scoreboard objectives add slime_boss_movment dummy
 scoreboard objectives add catnapper_movment dummy
+scoreboard objectives add final_boss_movment dummy
 
 ### Triggers
 
@@ -119,7 +120,7 @@ scoreboard objectives add thief_victom dummy
 
 ### Welcome message
 
-tellraw @a ["","Welcome to the mystery of the 9 wands!","\n",{"text":"GitHub","bold":true,"underlined":true,"color":"dark_gray","clickEvent":{"action":"open_url","value":"https://github.com/MulesGaming/The-mystery-of-the-9-wands"}}]
+tellraw @a ["","Welcome to the mystery of the 9 wands!","\n",{"text":"Github","bold":true,"underlined":true,"color":"dark_gray","clickEvent":{"action":"open_url","value":"https://github.com/MulesGaming/The-mystery-of-the-9-wands"}}," ",{"text":"Website","bold":true,"underlined":true,"color":"gold","clickEvent":{"action":"open_url","value":"https://mulesgaming.github.io/projects/mystery-9-wands/the-mystery-9-wands.html"}}]
 
 ### Replace artifacs
 
@@ -207,4 +208,26 @@ scoreboard objectives add puzzle dummy
 scoreboard objectives add puzzle-on-off dummy
 scoreboard players set on puzzle-on-off 0
 
+### Reset Puzzel
 
+setblock -176 -59 158 mud_bricks
+setblock -176 -60 158 mud_bricks
+setblock -176 -58 158 mud_bricks
+
+setblock -177 -59 158 mud_bricks
+setblock -177 -60 158 mud_bricks
+setblock -177 -58 158 mud_bricks
+
+setblock -175 -59 158 mud_bricks
+setblock -175 -60 158 mud_bricks
+setblock -175 -58 158 mud_bricks
+scoreboard players set stand puzzle-on-off 1
+
+### Final boss
+
+summon marker -175 -60 164 {Tags:["final_boss"]}
+execute if score @p final_boss_movment matches 1 run tp @a -175 -60 164
+bossbar add final_boss_bossbar {"text": "Doomshire Clan Leader","color": "dark_red"}
+schedule function mystery_9_wands:final_boss_wand_wither 10s
+schedule function mystery_9_wands:final_boss_wand_wither 5s
+scoreboard objectives add cont_after_finalboss dummy

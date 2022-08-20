@@ -14,4 +14,7 @@ setblock -175 -60 157 anvil
 
 xp set @a 999999999 levels
 
+### Turn off
+
+scoreboard players set stand puzzle-on-off 0
 

@@ -1,6 +1,6 @@
 ### Fire resistince
 
-effect give @p fire_resistance 20 1 true
+effect give @e[limit=1,sort=nearest,distance=..1] fire_resistance 20 1 true
 
 ### Make fire
 

@@ -1,4 +1,3 @@
-### Run from command block(?)
 ### Summon John Lean
 
 summon villager -4 -60 -6 {Silent:1b,Invulnerable:1b,CustomNameVisible:1b,PersistenceRequired:0b,NoAI:1b,CanPickUpLoot:0b,Tags:["john_lean_start"],CustomName:'{"text":"John Dean","italic":false}',Offers:{}}

@@ -1,0 +1,50 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:carrot_on_a_stick",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{display:{Name:'{\"text\":\"Void Wand\",\"color\":\"black\",\"italic\":false}',Lore:['{\"text\":\"Right click to give suraunding entity\\'s withering. \",\"color\":\"gray\",\"italic\":false}']},Unbreakable:1b,CustomModelData:1534853,voidwand:1b}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:cyan_wool",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{continue_after_final:1b}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:carrot_on_a_stick",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{display:{Name:'{\"text\":\"Fire Wand\",\"color\":\"#FF7700 \",\"italic\":false}',Lore:['{\"text\":\"Right click to make fire around you\",\"color\":\"gray\",\"italic\":false}']},Unbreakable:1b,CustomModelData:986694,firewand:1b}\n"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

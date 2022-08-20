@@ -17,3 +17,7 @@ execute if score @p skele_cut matches 1 run tp @p -18.4 -52 78.7
 ### Catnapper
 
 execute if score @p catnapper_movment matches 1 run tp @p -176.39 -60 145.9
+
+### Final boss
+
+execute if score @p final_boss_movment matches 1 run tp @p -175 -60 164

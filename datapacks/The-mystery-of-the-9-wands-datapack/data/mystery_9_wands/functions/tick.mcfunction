@@ -230,6 +230,14 @@ execute if entity @p[scores={cat_wand=1..},nbt={SelectedItem:{id:"minecraft:carr
 
 scoreboard players remove @a[scores={cat_wand=1..}] cat_wand 1
 
+### Void wand right click
+
+execute if entity @p[scores={void_wand=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{voidwand:1b,CustomModelData:1534853}}}] run effect give @e[type=!player,distance=..3,team=!BaseTeam] wither 5
+
+### Void wand reset
+
+scoreboard players remove @a[scores={void_wand=1..}] void_wand 1
+
 ### Guardian cont
 
 execute store result score @a[limit=1] cont_after_guardian run clear @a cyan_wool{cont_after_guardian:1b} 0
@@ -250,12 +258,12 @@ execute if score @a[limit=1] cont_after_catnappers matches 1.. run function myst
 
 ### Puzzle start
 
-execute at @e[type=armor_stand,tag=puzzle] as @a[distance=..5,tag=!puzzle_player] run scoreboard players set @a[distance=..1,tag=!puzzle_player] puzzle 1
-tag @a[tag=skele_continue_player] remove skele_continue
-execute at @e[type=minecraft:armor_stand,tag=puzzle] run tag @a[distance=..5] add puzzle_player
-execute at @e[type=armor_stand,tag=puzzle] run tellraw @a[scores={puzzle=1}] ["","What is ",{"text":"Red ","color":"red"},{"text":"White ","color":"white"},"and ",{"text":"Black ","color":"black"},"all over?","\n","Rename the piece of paper to you're answer!"]
-execute at @e[type=armor_stand,tag=puzzle] if entity @p[distance=..5] run function mystery_9_wands:puzzle_start
-execute as @a if score @p puzzle matches 1 run scoreboard players set @p puzzle 0
+execute if score stand puzzle-on-off matches 1 run execute at @e[type=armor_stand,tag=puzzle] as @a[distance=..5,tag=!puzzle_player] run scoreboard players set @a[distance=..1,tag=!puzzle_player] puzzle 1
+execute if score stand puzzle-on-off matches 1 run tag @a[tag=skele_continue_player] remove skele_continue
+execute if score stand puzzle-on-off matches 1 run execute at @e[type=minecraft:armor_stand,tag=puzzle] run tag @a[distance=..5] add puzzle_player
+execute if score stand puzzle-on-off matches 1 run execute at @e[type=armor_stand,tag=puzzle] run tellraw @a[scores={puzzle=1}] ["","What is ",{"text":"Red ","color":"red"},{"text":"White ","color":"white"},"and ",{"text":"Black ","color":"black"},"all over?","\n","Rename the piece of paper to you're answer!"]
+execute if score stand puzzle-on-off matches 1 run execute at @e[type=armor_stand,tag=puzzle] if entity @p[distance=..5] run function mystery_9_wands:puzzle_start
+execute if score stand puzzle-on-off matches 1 run execute as @a if score @p puzzle matches 1 run scoreboard players set @p puzzle 0
 
 ### Puzzle completed
 
@@ -271,17 +279,12 @@ execute if score on puzzle-on-off matches 1 run execute if score done puzzle mat
 
 execute if score on puzzle-on-off matches 1 run function mystery_9_wands:check_for_fail
 
-### Reset Puzzel
+### Final boss start
 
-setblock -176 -59 158 mud_bricks
-setblock -176 -60 158 mud_bricks
-setblock -176 -58 158 mud_bricks
+execute at @e[tag=final_boss,type=marker] if entity @p[distance=..3] run function mystery_9_wands:start_final_boss
 
-setblock -177 -59 158 mud_bricks
-setblock -177 -60 158 mud_bricks
-setblock -177 -58 158 mud_bricks
+### Final boss cont
 
-setblock -175 -59 158 mud_bricks
-setblock -175 -60 158 mud_bricks
-setblock -175 -58 158 mud_bricks
+execute store result score @a[limit=1] cont_after_finalboss run clear @a cyan_wool{cont_after_final:1b} 0
+execute if score @a[limit=1] cont_after_finalboss matches 1.. run function mystery_9_wands:cont_after_final_boss
 
