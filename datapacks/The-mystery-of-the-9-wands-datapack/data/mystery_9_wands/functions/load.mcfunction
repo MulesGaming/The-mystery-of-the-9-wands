@@ -22,6 +22,8 @@ scoreboard objectives add go_to_home trigger
 ### Statue part count
 
 scoreboard objectives add statuepartgotten dummy
+kill @e[type=item,nbt={Item:{id:"minecraft:item_frame"}}]
+kill @e[type=item,nbt={Item:{id:"minecraft:gold_block"}}]
 
 ### Death message 
 
@@ -65,10 +67,10 @@ scoreboard objectives add miner_npc dummy
 
 scoreboard objectives add skele_boss dummy
 bossbar add skeleboss {"text": "Thief Leader", "color": "gold"}
-
-### Armor stand for boss distance
-
-summon area_effect_cloud ~ ~ ~ {Particle:"block air",Radius:1f,Duration:199999980,Age:1999980,Color:16777215,Tags:["skele_continue"]}
+setblock -18 -51 82 air
+setblock -19 -51 82 air
+setblock -20 -51 83 air
+scoreboard objectives add cont_after_thief_skeley dummy
 
 ### Continue
 
@@ -113,8 +115,7 @@ summon marker 15 -48 72 {Tags:["rooftop_start"]}
 summon marker -7 -48 62 {Tags:["rooftop_fail"]}
 
 ### Thief victom
-tp @e[type=villager,tag=thiefvictom,distance=..2] ~ ~-100 ~
-kill @e[type=villager,tag=thiefvictom]
+execute at @e[type=villager,tag=thiefvictom] run tp @e[type=villager,tag=thiefvictom,distance=..2] ~ ~-100 ~
 summon villager 7.5 -59.5 91.3 {Invulnerable:1b,Tags:["thiefvictom"],Team:"BaseTeam",NoAI:1b,VillagerData:{level:2,profession:"minecraft:shepherd"},Offers:{Recipes:[{rewardExp:0b,maxUses:2147483647,uses:0,xp:0,buy:{id:"minecraft:paper",Count:1b,tag:{display:{Name:'{"text":"Purse","italic":false}'},CustomModelData:987785}},sell:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Speed Wand","color":"light_purple","italic":false}',Lore:['{"text":"Right click to gain the speed effect.","color":"dark_purple","italic":false}']},Unbreakable:1b,CustomModelData:643978,speedwand:1b}}}]}}
 scoreboard objectives add thief_victom dummy
 
@@ -172,6 +173,8 @@ kill @e[type=vindicator,tag=catnapper]
 
 ### Resourse pack enabled
 
+kill @e[type=item,nbt={Item:{id:"minecraft:paper",tag:{CustomModelData:874336}}}]
+kill @e[type=item,nbt={Item:{id:"minecraft:item_frame"}}]
 summon item_frame 74 -58 -18 {Facing:2b,Invulnerable:1b,Invisible:1b,Tags:["resoursepacktest"],Item:{id:"minecraft:paper",Count:1b,tag:{CustomModelData:874336}}}
 summon item_frame 74 -58 -35 {Facing:3b,Invulnerable:1b,Invisible:1b,Tags:["resoursepacktest"],Item:{id:"minecraft:paper",Count:1b,tag:{CustomModelData:874336}}}
 setblock 74 -57 -18 minecraft:oak_wall_sign[facing=north,waterlogged=false]{Color:"black",GlowingText:1b,Text1:'{"bold":true,"color":"dark_green","text":"Is there a "}',Text2:'{"bold":true,"color":"dark_green","text":"checkmark?"}',Text3:'{"bold":true,"color":"dark_green","clickEvent":{"action":"run_command","value":"/tellraw @p [\\"\\",{\\"text\\":\\"Recourse pack download instructions(if its not automatically installed):\\",\\"bold\\":true,\\"color\\":\\"dark_blue\\"},\\"\\\\n\\",\\"\\\\n\\",{\\"text\\":\\"Click here\\",\\"underlined\\":true,\\"color\\":\\"dark_gray\\",\\"clickEvent\\":{\\"action\\":\\"open_url\\",\\"value\\":\\"https://github.com/MulesGaming/The-mystery-of-the-9-wands/releases/\\"}},{\\"text\\":\\" or go to \\",\\"color\\":\\"dark_gray\\"},{\\"text\\":\\"github.com/MulesGaming/The-mystery-of-the-9-wands/releases/\\",\\"bold\\":true,\\"color\\":\\"dark_gray\\",\\"clickEvent\\":{\\"action\\":\\"open_url\\",\\"value\\":\\"github.com/MulesGaming/The-mystery-of-the-9-wands/releases/\\"}},{\\"text\\":\\" and click on the latest release. \\",\\"color\\":\\"dark_gray\\"},{\\"text\\":\\"Go to \\\\\\"Assets\\\\\\" the download the file named mystery-9-wands-rp.zip and open in folder. \\",\\"color\\":\\"dark_gray\\"},{\\"text\\":\\"Now pause Minecraft, go to options, Recourse packs, Open Pack Folder. Now drag Mystery-9-wands-rp.zip in the Recourse pack folder. In Minecraft it should now appear under Available and if you hover over it and click the play button it will enable!\\",\\"color\\":\\"dark_gray\\"}]"},"text":"If not click me!"}',Text4:'{"text":""}'}

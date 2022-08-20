@@ -6,5 +6,3 @@ summon item_frame -23 -60 144 {Silent:1b,Facing:1b,Invulnerable:1b,Invisible:1b,
 
 setblock -23 -60 144 chest[facing=south]{CustomName:'{"text":"Bomb","color":"#FFA500"}'} replace
 
-### Text
-

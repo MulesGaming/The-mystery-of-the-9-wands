@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:cyan_wool",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{cont_after_thief_skeley:1b}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:carrot_on_a_stick",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{display:{Name:'[{\"text\":\"-----\",\"color\":\"light_purple\",\"italic\":false,\"obfuscated\":true},{\"text\":\" Orb Wand \",\"color\":\"light_purple\",\"italic\":false,\"obfuscated\":false},{\"text\":\"-----\",\"italic\":false}]',Lore:['{\"text\":\"Right click to summon give you boosting effects for 10 seconds.\",\"color\":\"dark_purple\",\"italic\":false}']},HideFlags:4,Unbreakable:1b,Damage:0,CustomModelData:92869,orb_wand:1b,AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:2,Operation:0,UUID:[I;1221106321,-791197179,-1299206702,-1299806236],Slot:\"mainhand\"}]}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

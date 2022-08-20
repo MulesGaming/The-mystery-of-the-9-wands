@@ -6,7 +6,7 @@ scoreboard players set code bomb_code 0
 
 ### Open cave side
 
-setblock -21 -59 144 air
-setblock -21 -60 144 air
-setblock -21 -59 143 air
+setblock -20 -59 144 air
+setblock -20 -60 144 air
+setblock -20 -59 143 air
 setblock -21 -60 143 air

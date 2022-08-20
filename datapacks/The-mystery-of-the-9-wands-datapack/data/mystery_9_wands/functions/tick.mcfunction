@@ -59,6 +59,9 @@ scoreboard players remove @a[scores={fang_wand=1..}] fang_wand 1
 
 ### Thiefery cutscence
 
+execute if block 8 -57 130 mangrove_door[open=true] run function mystery_9_wands:museum_thievery_cutscene_1
+execute if block 9 -57 130 mangrove_door[open=true] run function mystery_9_wands:museum_thievery_cutscene_1
+
 ### Sataration
 
 effect give @a saturation 999999 99 true
@@ -107,11 +110,8 @@ function mystery_9_wands:thief_skele_bossbar
 
 ### Continue story
 
-execute at @e[type=area_effect_cloud,tag=skele_continue] as @a[distance=..1,tag=!skele_continue_player] run scoreboard players set @a[distance=..1,tag=!skele_continue_player] skele_next 1
-tag @a[tag=skele_continue_player] remove skele_continue
-execute at @e[type=minecraft:area_effect_cloud,tag=skele_continue] run tag @a[distance=..1] add skele_continue_player
-execute at @e[type=area_effect_cloud,tag=skele_continue] run tellraw @a[scores={skele_next=1}] ["",{"text":"Continue story?","hoverEvent":{"action":"show_text","contents":[{"text":"Make sure to get the Orb wand.","italic":true}]}},"\n",{"text":"Continue?","bold":true,"underlined":true,"color":"green","clickEvent":{"action":"run_command","value":"/function mystery_9_wands:continue_after_skele"}}]
-execute as @a if score @p skele_next matches 1 run scoreboard players set @p skele_next 0
+execute store result score @a cont_after_thief_skeley run clear @a cyan_wool{cont_after_thief_skeley:1b} 0
+execute if score @p cont_after_thief_skeley matches 1.. run function mystery_9_wands:continue_after_skele
 
 ### Sewer text
 
