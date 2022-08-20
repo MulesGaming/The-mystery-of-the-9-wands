@@ -6,3 +6,8 @@
 Vanilla Tweaks(Armor statues datapack): https://vanillatweaks.net/
 MCStacker: https://mcstacker.net/
 Minecraft Json: https://www.minecraftjson.com/
+
+- Mystery of the 9 Wands webstie(s):
+
+Website: https://mulesgaming.github.io/projects/mystery-9-wands/the-mystery-9-wands.html
+Github: https://github.com/MulesGaming/The-mystery-of-the-9-wands/
