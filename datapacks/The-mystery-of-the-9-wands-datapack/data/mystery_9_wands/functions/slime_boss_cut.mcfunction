@@ -15,7 +15,7 @@ summon slime 135.2 -59 144 {Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,Size:5,
 tellraw @a ["","<",{"text":"Slime King","color":"gold"},"> ",{"selector":"@p","color":"gold"}," hand over the wands!"]
 tellraw @a  ["","<",{"text":"Slime King","color":"gold"},"> ","No? Then you shall poof!"]
 
-### PArt 2
+### Part 2
 
 schedule function mystery_9_wands:slime_boss_cut_2 5.5s
 
@@ -30,3 +30,14 @@ fill 120 -58 148 120 -58 139 barrier replace air
 fill 120 -57 149 120 -57 138 barrier replace air
 fill 120 -56 149 120 -56 138 barrier replace air
 
+### Kill sewer slimes
+
+tp @e[type=slime,tag=sewer_slime_large] ~ ~-100 ~
+tp @e[type=slime,tag=sewer_slime_small] ~ ~-100 ~
+kill @e[type=slime,tag=sewer_slime_small]
+kill @e[type=slime,tag=sewer_slime_large]
+function mystery_9_wands:close_sewer
+
+### Kill start
+
+kill @e[type=marker,tag=slime_boss_cut]

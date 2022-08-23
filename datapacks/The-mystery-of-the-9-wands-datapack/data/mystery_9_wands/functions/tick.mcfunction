@@ -38,8 +38,8 @@ execute as @a[scores={go_to_home=1..}] run scoreboard players set @s go_to_home 
 
 ### Checkif player enter/exit
 
-execute positioned -51 -58 93 run teleport @a[distance=..1] -3 -57 83
-execute positioned -12 -60 90 run teleport @a[distance=..1] -52 -57 92
+execute at @e[type=marker,tag=exit_office] run teleport @a[distance=..2] -3 -57 83
+execute at @e[type=marker,tag=enter_office] run teleport @a[distance=..2] -52 -57 92
 
 ### If dead
 
@@ -153,13 +153,15 @@ function mystery_9_wands:slime_king_bossbar
 data modify entity @e[type=slime,name="Slime King",nbt={Size:0},limit=1] DeathLootTable set value continue_slime
 execute store result score @a[limit=1] slime_cont run clear @a cyan_wool{continue_after_slime:1b} 0
 execute if score @a[limit=1] slime_cont matches 1.. run function mystery_9_wands:cont_after_slime
+fill 120 -57 149 120 -57 138 air
+fill 120 -57 149 120 -56 138 air replace barrier
+fill 120 -57 149 120 -58 138 air replace barrier
 
 ### Slime wand right click
 
-execute if entity @p[scores={slime_wand=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{slimewand:1b,CustomModelData:210465}}}] run execute as @p run function mystery_9_wands:summon_slimes
+execute if score time slime_wand_timer matches ..1 run execute if score @p slime_wand matches 1.. run execute if entity @p[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{slimewand:1b,CustomModelData:210465}}}] at @p run function mystery_9_wands:summon_slimes
 execute if score time slime_wand_timer matches ..1 run function mystery_9_wands:reset_slime
-execute if score time slime_wand_timer matches 1.. run title @a actionbar ["","Undead wand is on cool down with ",{"score":{"name":"time","objective":"slime_wand_timer"}}," seconds left"]
-
+execute if score time slime_wand_timer matches 1.. run title @a actionbar ["","Slime wand is on cool down with ",{"score":{"name":"time","objective":"slime_wand_timer"}}," seconds left"]
 
 ### Slime wand reset
 
@@ -167,8 +169,8 @@ scoreboard players remove @a[scores={slime_wand=1..}] slime_wand 1
 
 ### Kill baby slimes from slime wand
 
+tp @e[type=slime,name="Summoned Slimes",tag=!slimewand_slimes] ~ ~-100 ~
 kill @e[type=slime,name="Summoned Slimes",tag=!slimewand_slimes]
-data modify entity @e[type=slime,name="Summoned Slimes",tag=!slimewand_slimes,limit=1] DeathLootTable append value blank_loottable
 
 ### Thief victom 
 

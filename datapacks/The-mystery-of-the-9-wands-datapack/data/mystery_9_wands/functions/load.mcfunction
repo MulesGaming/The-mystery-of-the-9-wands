@@ -14,6 +14,11 @@ scoreboard objectives add slime_boss_movment dummy
 scoreboard objectives add catnapper_movment dummy
 scoreboard objectives add final_boss_movment dummy
 
+### Checkif player enter/exit
+
+summon marker -51 -58 93 {Tags:["exit_office"]}
+summon marker -12 -60 90 {Tags:["enter_office"]}
+
 ### Triggers
 
 scoreboard objectives add kill_self trigger
@@ -88,21 +93,25 @@ scoreboard objectives add mail dummy
 
 scoreboard objectives add sewer dummy
 scoreboard objectives add sewer_npc dummy
+fill 139 -57 145 139 -55 142 minecraft:stone_bricks
 
 ### Sewer manhole marker
 
+setblock 6 -61 110 iron_trapdoor
 summon marker 6 -63 110 {Tags:["sewer_manhole"]}
 summon marker 165 -49 144 {Tags:["sewer_manhole_exit"]}
 
 ### Miner command(Just to save)
-# summon zombie -26 -60 143 {Silent:1b,Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,Tags:["miner"],CustomName:'{"text":"Miner","color":"gold","italic":false}',ArmorItems:[{},{},{},{id:"minecraft:carved_pumpkin",Count:1b,tag:{CustomModelData:2743753}}],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:2000000000000000000,ShowParticles:0b}]}
+#### summon zombie -26 -60 143 {Silent:1b,Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,Tags:["miner"],CustomName:'{"text":"Miner","color":"gold","italic":false}',ArmorItems:[{},{},{},{id:"minecraft:carved_pumpkin",Count:1b,tag:{CustomModelData:2743753}}],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:2000000000000000000,ShowParticles:0b}]}
 
-### Sewer worker
-# summon villager ~ ~ ~ {Silent:1b,Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,Health:1f,Rotation:[-180F,0F],Tags:["sewer_npc"],CustomName:'{"text":"Sewer Worker","italic":false}',ArmorItems:[{},{},{},{id:"minecraft:carved_pumpkin",Count:1b,tag:{Unbreakable:1b,CustomModelData:2363427}}],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:999999,ShowParticles:0b}],Attributes:[{Name:generic.max_health,Base:1}]}
+#### Sewer worker
+#### summon villager ~ ~ ~ {Silent:1b,Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,Health:1f,Rotation:[-180F,0F],Tags:["sewer_npc"],CustomName:'{"text":"Sewer Worker","italic":false}',ArmorItems:[{},{},{},{id:"minecraft:carved_pumpkin",Count:1b,tag:{Unbreakable:1b,CustomModelData:2363427}}],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:999999,ShowParticles:0b}],Attributes:[{Name:generic.max_health,Base:1}]}
 
 ### Slime wand
 
 summon item_frame 131.5 -59 143.4 {Invisible:1b,Fixed:1b,Tags:["slime_wand_holder"],Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:210465}}}
+kill @e[type=marker,tag=slime_boss_cut]
+summon marker 124.487 -59.5 143.9 {Tags:["slime_boss_cut"]}
 
 ### Slime King bossbar
 
@@ -111,6 +120,8 @@ scoreboard objectives add slime_cont dummy
 
 ### Add rooftop chase marker
 
+kill @e[type=marker,tag=rooftop_start]
+kill @e[type=marker,tag=rooftop_fail]
 summon marker 15 -48 72 {Tags:["rooftop_start"]}
 summon marker -7 -48 62 {Tags:["rooftop_fail"]}
 
@@ -132,10 +143,6 @@ function mystery_9_wands:replace_lost_staue_bits
 scoreboard objectives add if_final dummy
 scoreboard objectives add swamp dummy
 
-### Remove lost statue bits extras
-
-kill @e[type=item,nbt={Item:{id:"minecraft:gold_block",Count:1b,tag:{display:{Name:'{"text":"Lost statue bit","italic":false}'}}}}]
-kill @e[type=item,nbt={Item:{id:"minecraft:item_frame",Count:1b}}]
 
 ### Cat kidnapped
 
@@ -234,3 +241,7 @@ bossbar add final_boss_bossbar {"text": "Doomshire Clan Leader","color": "dark_r
 schedule function mystery_9_wands:final_boss_wand_wither 10s
 schedule function mystery_9_wands:final_boss_wand_wither 5s
 scoreboard objectives add cont_after_finalboss dummy
+
+### Remove lost statue bits extras
+
+schedule function mystery_9_wands:statue-bit-clear-extra 3s

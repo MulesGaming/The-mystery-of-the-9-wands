@@ -4,7 +4,7 @@ scoreboard players set open sewer 1
 
 ### Open sewer
 
-setblock 6 -61 110 iron_trapdoor{powered:true}
+setblock 6 -61 110 air
 
 ### Sewer slimes
 
