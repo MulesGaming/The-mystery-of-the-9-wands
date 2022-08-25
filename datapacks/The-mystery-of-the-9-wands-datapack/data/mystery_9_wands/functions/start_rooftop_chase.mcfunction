@@ -1,6 +1,6 @@
 ### Summon thief
 
-summon zombie 15 -48 72 {Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,CanPickUpLoot:0b,Tags:["ninjathief"],CustomName:'{"text":"Ninja Thief","color":"gold"}',ArmorItems:[{},{},{},{id:"minecraft:carved_pumpkin",Count:1b,tag:{CustomModelData:3758339}}],ActiveEffects:[{Id:14,Amplifier:1b,Duration:1999999999,ShowParticles:0b}]}
+summon zombie 15.4 -48.5 65.5 {Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,CanPickUpLoot:0b,Tags:["ninjathief"],CustomName:'{"text":"Ninja Thief","color":"gold"}',ArmorItems:[{},{},{},{id:"minecraft:carved_pumpkin",Count:1b,tag:{CustomModelData:3758339}}],ActiveEffects:[{Id:14,Amplifier:1b,Duration:1999999999,ShowParticles:0b}]}
 
 ### Text
 
@@ -13,8 +13,8 @@ kill @e[type=marker,tag=rooftop_start]
 
 ### TP player 
 
-tp @a 15.6 -48.5 69.5
+tp @a 15.6 -48.5 77
 
 ### Slow down player
 
-effect give @a slowness 999999 2 true
+effect give @a slowness 999999 1 true

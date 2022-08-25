@@ -1,16 +1,16 @@
 ### Move mobs when on purpur stairs(East, north, west, south)
 
-execute as @e[type=!player] at @s if block ~ ~-2 ~ purpur_stairs[facing=east] run tp @s ~.125 ~ ~ 270 0
-execute as @e[type=!player] at @s if block ~ ~-2 ~ purpur_stairs[facing=north] run tp @s ~ ~ ~-.125 180 0
-execute as @e[type=!player] at @s if block ~ ~-2 ~ purpur_stairs[facing=west] run tp @s ~-.125 ~ ~ 90 0
-execute as @e[type=!player] at @s if block ~ ~-2 ~ purpur_stairs[facing=south] run tp @s ~ ~ ~.125 0 0
+execute as @e[type=!marker,type=!player] at @s if block ~ ~-2 ~ purpur_stairs[facing=east] run tp @s ~.125 ~ ~ 270 0
+execute as @e[type=!marker,type=!player] at @s if block ~ ~-2 ~ purpur_stairs[facing=north] run tp @s ~ ~ ~-.125 180 0
+execute as @e[type=!marker,type=!player] at @s if block ~ ~-2 ~ purpur_stairs[facing=west] run tp @s ~-.125 ~ ~ 90 0
+execute as @e[type=!marker,type=!player] at @s if block ~ ~-2 ~ purpur_stairs[facing=south] run tp @s ~ ~ ~.125 0 0
 
 ### Move mobs when on purpur stairs with slabs(East, north, west, south)
 
-execute as @e[type=!player] at @s if block ~ ~-1.5 ~ purpur_stairs[facing=east] run tp @s ~.125 ~ ~ 270 0
-execute as @e[type=!player] at @s if block ~ ~-1.5 ~ purpur_stairs[facing=north] run tp @s ~ ~ ~-.125 180 0
-execute as @e[type=!player] at @s if block ~ ~-1.5 ~ purpur_stairs[facing=west] run tp @s ~-.125 ~ ~ 90 0
-execute as @e[type=!player] at @s if block ~ ~-1.5 ~ purpur_stairs[facing=south] run tp @s ~ ~ ~.125 0 0
+execute as @e[type=!marker,type=!player] at @s if block ~ ~-1.5 ~ purpur_stairs[facing=east] run tp @s ~.125 ~ ~ 270 0
+execute as @e[type=!marker,type=!player] at @s if block ~ ~-1.5 ~ purpur_stairs[facing=north] run tp @s ~ ~ ~-.125 180 0
+execute as @e[type=!marker,type=!player] at @s if block ~ ~-1.5 ~ purpur_stairs[facing=west] run tp @s ~-.125 ~ ~ 90 0
+execute as @e[type=!marker,type=!player] at @s if block ~ ~-1.5 ~ purpur_stairs[facing=south] run tp @s ~ ~ ~.125 0 0
 
 ### Rotate mobs when on end stone stairs
 
@@ -178,13 +178,11 @@ function mystery_9_wands:npc/thief_victim
 
 ### Start rooftop chase
 
-execute at @e[type=marker,tag=rooftop_start] if entity @a[distance=..2] run function mystery_9_wands:start_rooftop_chase
+execute at @e[type=marker,tag=rooftop_start] if entity @a[distance=..5] run function mystery_9_wands:start_rooftop_chase
 
 ### End rooftop chase
 
-execute at @e[type=marker,tag=rooftop_fail] if entity @a[distance=..2] run function mystery_9_wands:fail_rooftop_chase
-
-execute at @e[type=zombie,tag=ninjathief] if entity @a[distance=..2] run function mystery_9_wands:finish_rooftop_chase
+execute at @e[type=zombie,tag=ninjathief] if entity @p[distance=..2] run function mystery_9_wands:finish_rooftop_chase
 
 ### Speed wand right click
 

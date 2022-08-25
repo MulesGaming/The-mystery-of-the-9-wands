@@ -25,3 +25,8 @@ setblock -20 -57 80 barrier
 setblock -20 -59 80 barrier
 setblock -19 -58 80 barrier
 setblock -19 -57 80 barrier
+
+### Bomb
+
+summon item_frame -23 -60 144 {Silent:1b,Facing:1b,Invulnerable:1b,Invisible:1b,Fixed:1b,Tags:["bomb"],Item:{id:"minecraft:item_frame",Count:1b,tag:{CustomModelData:97654}}}
+

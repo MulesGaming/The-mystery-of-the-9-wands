@@ -102,10 +102,14 @@ summon marker 6 -63 110 {Tags:["sewer_manhole"]}
 summon marker 165 -49 144 {Tags:["sewer_manhole_exit"]}
 
 ### Miner command(Just to save)
-#### summon zombie -26 -60 143 {Silent:1b,Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,Tags:["miner"],CustomName:'{"text":"Miner","color":"gold","italic":false}',ArmorItems:[{},{},{},{id:"minecraft:carved_pumpkin",Count:1b,tag:{CustomModelData:2743753}}],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:2000000000000000000,ShowParticles:0b}]}
+####summon zombie -26 -60 143 {Silent:1b,Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,Tags:["miner"],CustomName:'{"text":"Miner","color":"gold","italic":false}',ArmorItems:[{},{},{},{id:"minecraft:carved_pumpkin",Count:1b,tag:{CustomModelData:2743753}}],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:2000000000,ShowParticles:0b}]}
 
 #### Sewer worker
-#### summon villager ~ ~ ~ {Silent:1b,Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,Health:1f,Rotation:[-180F,0F],Tags:["sewer_npc"],CustomName:'{"text":"Sewer Worker","italic":false}',ArmorItems:[{},{},{},{id:"minecraft:carved_pumpkin",Count:1b,tag:{Unbreakable:1b,CustomModelData:2363427}}],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:999999,ShowParticles:0b}],Attributes:[{Name:generic.max_health,Base:1}]}
+kill @e[type=villager,tag=sewer_npc]
+summon villager 5.2 -60 110.6 {Silent:1b,Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,Health:1f,Rotation:[-180F,0F],Tags:["sewer_npc"],CustomName:'{"text":"Sewer Worker","italic":false}',ArmorItems:[{},{},{},{id:"minecraft:carved_pumpkin",Count:1b,tag:{Unbreakable:1b,CustomModelData:2363427}}],ActiveEffects:[{Id:14,Amplifier:1b,Duration:999999,ShowParticles:0b}],Attributes:[{Name:"generic.max_health",Base:1}]}
+
+setblock 139 -58 143 stone_bricks
+setblock 139 -58 144 stone_bricks
 
 ### Slime wand
 
@@ -121,14 +125,18 @@ scoreboard objectives add slime_cont dummy
 ### Add rooftop chase marker
 
 kill @e[type=marker,tag=rooftop_start]
-kill @e[type=marker,tag=rooftop_fail]
 summon marker 15 -48 72 {Tags:["rooftop_start"]}
-summon marker -7 -48 62 {Tags:["rooftop_fail"]}
 
 ### Thief victom
+
 execute at @e[type=villager,tag=thiefvictom] run tp @e[type=villager,tag=thiefvictom,distance=..2] ~ ~-100 ~
 summon villager 7.5 -59.5 91.3 {Invulnerable:1b,Tags:["thiefvictom"],Team:"BaseTeam",NoAI:1b,VillagerData:{level:2,profession:"minecraft:shepherd"},Offers:{Recipes:[{rewardExp:0b,maxUses:2147483647,uses:0,xp:0,buy:{id:"minecraft:paper",Count:1b,tag:{display:{Name:'{"text":"Purse","italic":false}'},CustomModelData:987785}},sell:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Speed Wand","color":"light_purple","italic":false}',Lore:['{"text":"Right click to gain the speed effect.","color":"dark_purple","italic":false}']},Unbreakable:1b,CustomModelData:643978,speedwand:1b}}}]}}
 scoreboard objectives add thief_victom dummy
+
+### Remove ninja thief
+
+tp @e[type=zombie,tag=ninjathief] ~ ~-100 ~
+kill @e[type=zombie,tag=ninjathief]
 
 ### Welcome message
 

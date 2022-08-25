@@ -8,8 +8,8 @@ kill @e[type=minecart]
 
 ### Tp to cart
 
-tp @a -20.3 -59.5 77.4
+tp @a -173.6 -59 49.9
 
 ### Summon cart
 
-summon minecart -19.46 -60 77.416 {Invulnerable:1b,Tags:["to_cave"]}
+summon minecart -171 -60 49 {Invulnerable:1b,Tags:["to_swamp"]}
