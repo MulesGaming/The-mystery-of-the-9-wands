@@ -182,6 +182,7 @@ setblock -196 -63 85 barrier
 
 ### Catnapper 
 
+kill @e[type=marker,tag=catnapper]
 summon marker -176.38 -60 144.3 {Tags:["catnapper"]}
 kill @e[type=vindicator,tag=catnapper_cut]
 kill @e[type=vindicator,tag=catnapper]
@@ -221,6 +222,7 @@ setblock -176 -59 151 mud_bricks
 
 ### Puzzle
 
+kill @e[type=armor_stand,tag=puzzle]
 summon armor_stand -176 -59 157 {CustomNameVisible:1b,Invisible:1b,Tags:["puzzle"],CustomName:'[{"text":"Whats ","color":"black"},{"text":"Red ","color":"red"},{"text":"White ","color":"white"},{"text":"and ","color":"black"},{"text":"Black all over?","color":"black"}]'}
 scoreboard objectives add puzzle dummy
 scoreboard objectives add puzzle-on-off dummy

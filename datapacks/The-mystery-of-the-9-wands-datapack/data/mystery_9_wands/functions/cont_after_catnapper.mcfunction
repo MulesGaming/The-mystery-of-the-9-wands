@@ -1,21 +1,12 @@
 ### Remove wall
 
-setblock -176 -61 151 air
-setblock -176 -62 151 air
-setblock -177 -61 151 air
-setblock -177 -62 151 air
-
 setblock -176 -59 151 air
 setblock -176 -60 151 air
 setblock -177 -59 151 air
 setblock -177 -60 151 air
 
-### Falling block
-
-summon falling_block -176 -59 151 {BlockState:{Name:"minecraft:mud_bricks"},Time:1}
-summon falling_block -176 -60 151 {BlockState:{Name:"minecraft:mud_bricks"},Time:1}
-summon falling_block -177 -59 151 {BlockState:{Name:"minecraft:mud_bricks"},Time:1}
-summon falling_block -177 -60 151 {BlockState:{Name:"minecraft:mud_bricks"},Time:1}
+setblock -176 -61 151 bricks
+setblock -177 -61 151 bricks
 
 ### Clear actavaotr
 

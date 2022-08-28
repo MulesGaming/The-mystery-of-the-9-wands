@@ -1,7 +1,7 @@
 ### Destroy Minecart and tp player
 
 kill @e[type=minecart]
-tp @a 195.154 -60 86.383
+tp @a -192.7 -60 86.8
 function mystery_9_wands:start-guardian-boss
 
 ### Blockoff tunnel
