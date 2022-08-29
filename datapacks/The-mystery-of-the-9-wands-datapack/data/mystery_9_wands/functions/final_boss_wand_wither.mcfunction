@@ -1,6 +1,6 @@
 ### Use void wand
 
-execute at @e[type=illusioner,tag=final_boss_cut] as @e[type=illusioner,tag=final_boss_cut] run effect give @e[type=!illusioner,distance=..3] wither 7
+execute at @e[type=evoker,tag=final_boss_cut] as @e[type=illusioner,tag=final_boss_cut] run effect give @e[type=!evoker,distance=..6] wither 7
 
 ### Do agian
 

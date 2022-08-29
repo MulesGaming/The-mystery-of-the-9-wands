@@ -30,6 +30,18 @@ scoreboard objectives add statuepartgotten dummy
 kill @e[type=item,nbt={Item:{id:"minecraft:item_frame"}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:gold_block"}}]
 
+### Employ
+
+kill @e[type=villager,tag=museumemployee]
+summon villager -4.1 -57 121.3 {Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,Tags:["museumemployee"],CustomName:'{"text":"Museum Employee","color":"gold"}',VillagerData:{profession:"minecraft:librarian"},Offers:{Recipes:[{rewardExp:0b,maxUses:2147483647,buy:{id:"minecraft:gold_block",Count:4b,tag:{display:{Name:'{"text":"Lost statue bit","italic":false}'}}},sell:{id:"minecraft:tripwire_hook",Count:1b,tag:{display:{Name:'{"text":"Museum employee key","italic":false}'},CustomModelData:200}}}]}}
+
+### Doors
+
+setblock 9 -56 130 mangrove_door[half=upper]
+setblock 8 -56 130 mangrove_door[half=upper]
+setblock 9 -57 130 mangrove_door[half=lower]
+setblock 8 -57 130 mangrove_door[half=lower]
+
 ### Death message 
 
 scoreboard objectives add death deathCount
@@ -60,9 +72,15 @@ scoreboard objectives add mctransport dummy
 
 ### Bomb
 
+setblock -23 -60 144 chest
 scoreboard objectives add bomb_menu dummy
 scoreboard objectives add bomb_code dummy
 function mystery_9_wands:bomb/menu/page0/items
+
+setblock -21 -59 143 stone
+setblock -21 -60 143 stone
+setblock -21 -59 144 stone
+setblock -21 -60 144 stone
 
 ### Miner
 
@@ -83,7 +101,8 @@ scoreboard objectives add skele_next dummy
 
 ### Summon miner
 
-summon zombie -26 -60 143 {Silent:1b,Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,Tags:["miner"],CustomName:'{"text":"Miner","color":"gold","italic":false}',ArmorItems:[{},{},{},{id:"minecraft:carved_pumpkin",Count:1b,tag:{CustomModelData:2743753}}],ActiveEffects:[{Id:14,Amplifier:1b,Duration:2147483647,ShowParticles:0b}]}
+kill @e[type=zombie,tag=miner]
+summon zombie -26 -60 143 {Silent:1b,Invulnerable:1b,CustomNameVisible:1b,DeathLootTable:"mystery_9_wands:entities/blank_loottable",NoAI:1b,Tags:["miner"],CustomName:'{"text":"Miner","color":"gold","italic":false}',ArmorItems:[{},{},{},{id:"minecraft:carved_pumpkin",Count:1b,tag:{CustomModelData:2743753}}],ActiveEffects:[{Id:14,Amplifier:1b,Duration:1999999980,ShowParticles:0b}]}
 
 ### Mail
 
@@ -140,7 +159,7 @@ kill @e[type=zombie,tag=ninjathief]
 
 ### Welcome message
 
-tellraw @a ["","Welcome to the mystery of the 9 wands!","\n",{"text":"Github","bold":true,"underlined":true,"color":"dark_gray","clickEvent":{"action":"open_url","value":"https://github.com/MulesGaming/The-mystery-of-the-9-wands"}}," ",{"text":"Website","bold":true,"underlined":true,"color":"gold","clickEvent":{"action":"open_url","value":"https://mulesgaming.github.io/projects/mystery-9-wands/the-mystery-9-wands.html"}}]
+tellraw @a ["","Welcome to the mystery of the 9 wands!","\n",{"text":"Github","bold":true,"underlined":true,"color":"dark_gray","clickEvent":{"action":"open_url","value":"https://github.com/MulesGaming/The-mystery-of-the-9-wands"}}," ",{"text":"Website","bold":true,"underlined":true,"color":"dark_red","clickEvent":{"action":"open_url","value":"https://mulesgaming.com/projects/mystery-9-wands/the-mystery-9-wands"}}]
 
 ### Replace artifacs
 
@@ -195,6 +214,8 @@ summon item_frame 74 -58 -18 {Facing:2b,Invulnerable:1b,Invisible:1b,Tags:["reso
 summon item_frame 74 -58 -35 {Facing:3b,Invulnerable:1b,Invisible:1b,Tags:["resoursepacktest"],Item:{id:"minecraft:paper",Count:1b,tag:{CustomModelData:874336}}}
 setblock 74 -57 -18 minecraft:oak_wall_sign[facing=north,waterlogged=false]{Color:"black",GlowingText:1b,Text1:'{"bold":true,"color":"dark_green","text":"Is there a "}',Text2:'{"bold":true,"color":"dark_green","text":"checkmark?"}',Text3:'{"bold":true,"color":"dark_green","clickEvent":{"action":"run_command","value":"/tellraw @p [\\"\\",{\\"text\\":\\"Recourse pack download instructions(if its not automatically installed):\\",\\"bold\\":true,\\"color\\":\\"dark_blue\\"},\\"\\\\n\\",\\"\\\\n\\",{\\"text\\":\\"Click here\\",\\"underlined\\":true,\\"color\\":\\"dark_gray\\",\\"clickEvent\\":{\\"action\\":\\"open_url\\",\\"value\\":\\"https://github.com/MulesGaming/The-mystery-of-the-9-wands/releases/\\"}},{\\"text\\":\\" or go to \\",\\"color\\":\\"dark_gray\\"},{\\"text\\":\\"github.com/MulesGaming/The-mystery-of-the-9-wands/releases/\\",\\"bold\\":true,\\"color\\":\\"dark_gray\\",\\"clickEvent\\":{\\"action\\":\\"open_url\\",\\"value\\":\\"github.com/MulesGaming/The-mystery-of-the-9-wands/releases/\\"}},{\\"text\\":\\" and click on the latest release. \\",\\"color\\":\\"dark_gray\\"},{\\"text\\":\\"Go to \\\\\\"Assets\\\\\\" the download the file named mystery-9-wands-rp.zip and open in folder. \\",\\"color\\":\\"dark_gray\\"},{\\"text\\":\\"Now pause Minecraft, go to options, Recourse packs, Open Pack Folder. Now drag Mystery-9-wands-rp.zip in the Recourse pack folder. In Minecraft it should now appear under Available and if you hover over it and click the play button it will enable!\\",\\"color\\":\\"dark_gray\\"}]"},"text":"If not click me!"}',Text4:'{"text":""}'}
 setblock 74 -57 -35 minecraft:oak_wall_sign[facing=south,waterlogged=false]{Color:"black",GlowingText:1b,Text1:'{"bold":true,"color":"dark_green","text":"Is there a "}',Text2:'{"bold":true,"color":"dark_green","text":"checkmark?"}',Text3:'{"bold":true,"color":"dark_green","clickEvent":{"action":"run_command","value":"/tellraw @p [\\"\\",{\\"text\\":\\"Recourse pack download instructions(if its not automatically installed):\\",\\"bold\\":true,\\"color\\":\\"dark_blue\\"},\\"\\\\n\\",\\"\\\\n\\",{\\"text\\":\\"Click here\\",\\"underlined\\":true,\\"color\\":\\"dark_gray\\",\\"clickEvent\\":{\\"action\\":\\"open_url\\",\\"value\\":\\"https://github.com/MulesGaming/The-mystery-of-the-9-wands/releases/\\"}},{\\"text\\":\\" or go to \\",\\"color\\":\\"dark_gray\\"},{\\"text\\":\\"github.com/MulesGaming/The-mystery-of-the-9-wands/releases/\\",\\"bold\\":true,\\"color\\":\\"dark_gray\\",\\"clickEvent\\":{\\"action\\":\\"open_url\\",\\"value\\":\\"github.com/MulesGaming/The-mystery-of-the-9-wands/releases/\\"}},{\\"text\\":\\" and click on the latest release. \\",\\"color\\":\\"dark_gray\\"},{\\"text\\":\\"Go to \\\\\\"Assets\\\\\\" the download the file named mystery-9-wands-rp.zip and open in folder. \\",\\"color\\":\\"dark_gray\\"},{\\"text\\":\\"Now pause Minecraft, go to options, Recourse packs, Open Pack Folder. Now drag Mystery-9-wands-rp.zip in the Recourse pack folder. In Minecraft it should now appear under Available and if you hover over it and click the play button it will enable!\\",\\"color\\":\\"dark_gray\\"}]"},"text":"If not click me!"}',Text4:'{"text":""}'}
+kill @e[type=item,nbt={Item:{id:"minecraft:paper",tag:{CustomModelData:874336}}}]
+kill @e[type=item,nbt={Item:{id:"minecraft:item_frame"}}]
 
 ### Catnapper continue
 
@@ -208,7 +229,7 @@ setblock -175 -59 144 iron_bars
 setblock -174 -59 148 iron_bars
 setblock -174 -59 148 iron_bars
 
-### Fix carnapper wall wall
+### Fix carnapper wall 
 
 setblock -177 -61 151 air
 setblock -177 -62 151 air
@@ -220,38 +241,27 @@ setblock -177 -59 151 mud_bricks
 setblock -176 -60 151 mud_bricks
 setblock -176 -59 151 mud_bricks
 
-### Puzzle
-
-kill @e[type=armor_stand,tag=puzzle]
-summon armor_stand -176 -59 157 {CustomNameVisible:1b,Invisible:1b,Tags:["puzzle"],CustomName:'[{"text":"Whats ","color":"black"},{"text":"Red ","color":"red"},{"text":"White ","color":"white"},{"text":"and ","color":"black"},{"text":"Black all over?","color":"black"}]'}
-scoreboard objectives add puzzle dummy
-scoreboard objectives add puzzle-on-off dummy
-scoreboard players set on puzzle-on-off 0
-
-### Reset Puzzel
-
-setblock -176 -59 158 mud_bricks
-setblock -176 -60 158 mud_bricks
-setblock -176 -58 158 mud_bricks
-
-setblock -177 -59 158 mud_bricks
-setblock -177 -60 158 mud_bricks
-setblock -177 -58 158 mud_bricks
-
-setblock -175 -59 158 mud_bricks
-setblock -175 -60 158 mud_bricks
-setblock -175 -58 158 mud_bricks
-scoreboard players set stand puzzle-on-off 1
+setblock -175 -59 151 mud_bricks
+setblock -175 -60 151 mud_bricks
 
 ### Final boss
 
+kill @e[type=marker,tag=final_boss]
 summon marker -175 -60 164 {Tags:["final_boss"]}
 execute if score @p final_boss_movment matches 1 run tp @a -175 -60 164
 bossbar add final_boss_bossbar {"text": "Doomshire Clan Leader","color": "dark_red"}
 schedule function mystery_9_wands:final_boss_wand_wither 10s
-schedule function mystery_9_wands:final_boss_wand_wither 5s
+schedule function mystery_9_wands:final_boss_wand_fire 5s
 scoreboard objectives add cont_after_finalboss dummy
 
 ### Remove lost statue bits extras
 
-schedule function mystery_9_wands:statue-bit-clear-extra 3s
+schedule function mystery_9_wands:statue-bit-clear-extra 10s
+
+### Game mode
+
+gamemode adventure @a
+
+### Levels
+
+xp set @a 99999 levels

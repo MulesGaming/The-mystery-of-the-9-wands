@@ -18,10 +18,10 @@ schedule function mystery_9_wands:museum_thievery_cutscene_2 5.5s
 
 ### Close doors
 
+setblock 9 -56 130 mangrove_door[half=upper,open=false] destroy
 setblock 9 -57 130 mangrove_door[half=lower,open=false] destroy
-setblock 9 -58 130 mangrove_door[half=upper,open=false] destroy
 setblock 8 -57 130 mangrove_door[half=lower,open=false] destroy
-setblock 8 -58 130 mangrove_door[half=upper,open=false] destroy
+setblock 8 -56 130 mangrove_door[half=upper,open=false] destroy
 kill @e[type=item,nbt={Item:{id:"minecraft:mangrove_door"}}]
 
 ### Checkpoint

@@ -1,4 +1,5 @@
 ### Museum locked door entrence
+
 setblock 4 -56 121 air replace
 setblock 4 -57 121 mangrove_door[facing=east] replace
 setblock 4 -56 121 mangrove_door[half=upper,facing=east] replace

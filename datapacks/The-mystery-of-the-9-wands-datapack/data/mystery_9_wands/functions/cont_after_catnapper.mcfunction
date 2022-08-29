@@ -1,7 +1,11 @@
 ### Remove wall
 
+setblock -175 -59 151 air
+setblock -175 -60 151 air
 setblock -176 -59 151 air
 setblock -176 -60 151 air
+setblock -177 -59 151 air
+setblock -177 -60 151 air
 setblock -177 -59 151 air
 setblock -177 -60 151 air
 

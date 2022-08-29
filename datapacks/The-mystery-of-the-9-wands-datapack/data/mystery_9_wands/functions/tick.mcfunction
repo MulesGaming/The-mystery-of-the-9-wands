@@ -36,7 +36,7 @@ scoreboard players enable @a go_to_home
 execute as @a[scores={go_to_home=1..}] run tp @p 74 -58 -25
 execute as @a[scores={go_to_home=1..}] run scoreboard players set @s go_to_home 0
 
-### Checkif player enter/exit
+### Check if player enter/exit
 
 execute at @e[type=marker,tag=exit_office] run teleport @a[distance=..2] -3 -57 83
 execute at @e[type=marker,tag=enter_office] run teleport @a[distance=..2] -52 -57 92
@@ -256,35 +256,24 @@ execute at @e[type=marker,tag=catnapper] if entity @p[distance=..2] run function
 execute store result score @a[limit=1] cont_after_catnappers run clear @a cyan_wool{continue_after_catnapper:1b} 0
 execute if score @a[limit=1] cont_after_catnappers matches 1.. run function mystery_9_wands:cont_after_catnapper
 
-### Puzzle start
-
-execute if score stand puzzle-on-off matches 1 run execute at @e[type=armor_stand,tag=puzzle] as @a[distance=..5,tag=!puzzle_player] run scoreboard players set @a[distance=..1,tag=!puzzle_player] puzzle 1
-execute if score stand puzzle-on-off matches 1 run tag @a[tag=skele_continue_player] remove skele_continue
-execute if score stand puzzle-on-off matches 1 run execute at @e[type=minecraft:armor_stand,tag=puzzle] run tag @a[distance=..5] add puzzle_player
-execute if score stand puzzle-on-off matches 1 run execute at @e[type=armor_stand,tag=puzzle] run tellraw @a[scores={puzzle=1}] ["","What is ",{"text":"Red ","color":"red"},{"text":"White ","color":"white"},"and ",{"text":"Black ","color":"black"},"all over?","\n","Rename the piece of paper to you're answer!"]
-execute if score stand puzzle-on-off matches 1 run execute at @e[type=armor_stand,tag=puzzle] if entity @p[distance=..5] run function mystery_9_wands:puzzle_start
-execute if score stand puzzle-on-off matches 1 run execute as @a if score @p puzzle matches 1 run scoreboard players set @p puzzle 0
-
-### Puzzle completed
-
-execute if score on puzzle-on-off matches 1 run execute store result score done puzzle run clear @a paper{display:{Name:'{"text":"A sun burned zebra","italic":true}'},puzzle:1b} 0
-execute if score on puzzle-on-off matches 1 run execute store result score done puzzle run clear @a paper{display:{Name:'{"text":"A sun burned zebra!","italic":true}'},puzzle:1b} 0
-execute if score on puzzle-on-off matches 1 run execute store result score done puzzle run clear @a paper{display:{Name:'{"text":"A sun burned Zebra","italic":true}'},puzzle:1b} 0
-execute if score on puzzle-on-off matches 1 run execute store result score done puzzle run clear @a paper{display:{Name:'{"text":"A sun burned Zebra!","italic":true}'},puzzle:1b} 0
-execute if score on puzzle-on-off matches 1 run execute store result score done puzzle run clear @a paper{display:{Name:'{"text":"sun burned Zebra","italic":true}'},puzzle:1b} 0
-execute if score on puzzle-on-off matches 1 run execute store result score done puzzle run clear @a paper{display:{Name:'{"text":"sun burned zebra","italic":true}'},puzzle:1b} 0
-execute if score on puzzle-on-off matches 1 run execute if score done puzzle matches 1.. run function mystery_9_wands:puzzel_correct
-
-### Puzzle failed
 
 execute if score on puzzle-on-off matches 1 run function mystery_9_wands:check_for_fail
 
 ### Final boss start
 
 execute at @e[tag=final_boss,type=marker] if entity @p[distance=..3] run function mystery_9_wands:start_final_boss
+function mystery_9_wands:final_boss_bossbar
 
 ### Final boss cont
 
-execute store result score @a[limit=1] cont_after_finalboss run clear @a cyan_wool{cont_after_final:1b} 0
+execute store result score @a[limit=1] cont_after_finalboss run clear @a cyan_wool{continue_after_final:1b} 0
 execute if score @a[limit=1] cont_after_finalboss matches 1.. run function mystery_9_wands:cont_after_final_boss
 
+### Weather
+
+weather clear
+time set day
+
+### Resourse pack clear
+
+clear @a paper{CustomModelData:874336}

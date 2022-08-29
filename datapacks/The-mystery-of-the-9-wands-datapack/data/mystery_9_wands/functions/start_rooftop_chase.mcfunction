@@ -4,7 +4,7 @@ summon zombie 15.4 -48.5 65.5 {Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,CanP
 
 ### Text
 
-tellraw @a ["","<",{"text":"Ninja thief","color":"gold"},"> ","Once I deliver the wand from this purse and the on I have on me to the Doomshire clan we will have all the wands besides the ones you have! You'll never catch me."]
+tellraw @a ["","<",{"text":"Ninja thief","color":"gold"},"> ","Once I deliver the wand from this purse and the on I have on me to the Doomshire clan we will have the power over the undead!! You'll never catch me."]
 
 ### Remove old marker
 

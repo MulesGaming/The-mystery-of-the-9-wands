@@ -8,7 +8,7 @@ summon skeleton -18.7 -52 71.2 {Silent:1b,CustomNameVisible:1b,DeathLootTable:"m
 
 ### Text
 
-tellraw @a ["","<",{"text":"Thief Leader","color":"gold"},"> ","You can not stop the ",{"text":"Doomshire Clan. ","bold":true,"color":"dark_red"},"Once we have the 9th wand from you nothing will be able to stop us!"]
+tellraw @a ["","<",{"text":"Thief Leader","color":"gold"},"> ","You can not stop the ",{"text":"Doomshire Clan. ","bold":true,"color":"dark_red"},"Once we have the wands from you nothing will be able to stop us!"]
 
 ### Make stair
 
