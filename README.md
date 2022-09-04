@@ -5,7 +5,7 @@
 
 -----**Installation instructions**-----  
 
-  First you need to download the files. You can go to the releases section of the Github page( github.com/MulesGaming/The-mystery-of-the-9-wands/releases ), select the most resent version, and under the _assets_ section download  _The-mystery-of-the-9-wands-world.zip_. Now open the zip file. Now you need to move the *The-mystery-of-the-9-wands* folder into Minecraft's saves folder. On a windows computer you can press *Win+R* to open the run application or open it by searching. In the text box put in *%appdata%\.minecraft\saves* . You can rename *The-mystery-of-the-9-wands* to something else(Such as *The mystery of the 9 wands*) but this is not required.  
+  First you need to download the files. You can go to the [releases section of the Github page](https://github.com/MulesGaming/The-mystery-of-the-9-wands/releases), select the most resent version, and under the _assets_ section download  _The-mystery-of-the-9-wands-world.zip_. Now open the zip file. Now you need to move the *The-mystery-of-the-9-wands* folder into Minecraft's saves folder. On a windows computer you can press *Win+R* to open the run application or open it by searching. In the text box put in *%appdata%\.minecraft\saves* . You can rename *The-mystery-of-the-9-wands* to something else(Such as *The mystery of the 9 wands*) but this is not required.  
   
 -----**Version Info**-----  
 
