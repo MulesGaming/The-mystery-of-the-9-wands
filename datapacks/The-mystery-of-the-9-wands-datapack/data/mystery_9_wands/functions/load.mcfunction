@@ -256,7 +256,7 @@ scoreboard objectives add cont_after_finalboss dummy
 
 ### Remove lost statue bits extras
 
-schedule function mystery_9_wands:statue-bit-clear-extra 10s
+schedule function mystery_9_wands:clear-items 11s
 
 ### Game mode
 

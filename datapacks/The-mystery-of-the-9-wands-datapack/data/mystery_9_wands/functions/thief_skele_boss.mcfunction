@@ -28,3 +28,9 @@ spawnpoint @a -19 -52 80
 setblock -18 -51 82 barrier
 setblock -19 -51 82 barrier
 setblock -20 -51 83 barrier
+
+
+### Checkpoint
+
+tellraw @a {"text":"Checkpoint!","bold":true,"underlined":true,"color":"green"}
+spawnpoint @a -54 -56 81

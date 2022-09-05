@@ -1,11 +1,3 @@
-### GO to office
-
-tp @a -54.047 -56.50000 81.942
-
-### Checkpoint
-
-tellraw @a {"text":"Checkpoint!","bold":true,"underlined":true,"color":"green"}
-spawnpoint @a -54 -56 81
 
 ### Mail
 
@@ -27,4 +19,7 @@ clear @a cyan_wool{cont_after_thief_skeley:1b}
 
 item replace entity @a weapon.offhand with compass{display:{Name:'{"text":"Destination Compass","color":"white","italic":false}',Lore:['{"text":"This compass points towards your next destination","color":"yellow","italic":false}']},HideFlags:5,Unbreakable:1b,LodestoneDimension:"minecraft:overworld",LodestoneTracked:1b,LodestonePos:{X:6,Y:-64,Z:111}}
 
+### GO to office
+
+tp @a -54.047 -56.50000 81.942
 
