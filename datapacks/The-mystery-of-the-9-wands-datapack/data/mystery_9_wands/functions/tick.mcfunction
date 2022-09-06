@@ -68,7 +68,7 @@ effect give @a saturation 999999 99 true
 
 ### MCtransport employee
 
-execute at @e[type=villager,tag=mctransportemployee] as @a[distance=..4,tag=!mctransport_player] run scoreboard players set @a[distance=..4,tag=!mctransport_player] mctransport 1
+execute at @e[type=villager,tag=mctransportemployee] as @a[distance=..3.5,tag=!mctransport_player] run scoreboard players set @a[distance=..4,tag=!mctransport_player] mctransport 1
 tag @a[tag=mctransport_player] remove mctransport_player
 execute at @e[type=villager,tag=mctransportemployee] run tag @a[distance=..4] add mctransport_player
 

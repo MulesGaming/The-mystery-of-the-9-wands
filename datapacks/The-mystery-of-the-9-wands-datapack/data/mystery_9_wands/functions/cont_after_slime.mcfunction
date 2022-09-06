@@ -12,8 +12,8 @@ schedule function mystery_9_wands:cont_after_slime_clearup 1s
 
 ### Remove back wall
 
-setblock 139 -58 143 air replace 
-setblock 139 -58 144 air replace
+setblock 139 -56 143 air replace 
+setblock 139 -56 144 air replace
 setblock 139 -57 143 air replace
 setblock 139 -57 144 air replace
 

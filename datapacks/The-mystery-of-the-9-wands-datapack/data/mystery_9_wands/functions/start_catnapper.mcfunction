@@ -22,5 +22,5 @@ schedule function mystery_9_wands:end_catnapper 7s
 
 ### Checkpoint
 
-tellraw @a {"text":"Checkpoint!","bold":true,"underlined":true,"color":"green","clickEvent":{"action":"run_command","value":"/function mystery_9_wands:continue_after_skele"}}
+tellraw @a {"text":"Checkpoint!","bold":true,"underlined":true,"color":"green"}
 spawnpoint @a -176 -60 141

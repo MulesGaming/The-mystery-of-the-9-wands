@@ -26,7 +26,7 @@ kill @e[type=item,nbt={Item:{id:"minecraft:mangrove_door"}}]
 
 ### Checkpoint
 
-tellraw @a {"text":"Checkpoint!","bold":true,"underlined":true,"color":"green","clickEvent":{"action":"run_command","value":"/function mystery_9_wands:continue_after_skele"}}
+tellraw @a {"text":"Checkpoint!","bold":true,"underlined":true,"color":"green"}
 spawnpoint @a 8 -57 132
 
 ### Set barrel
