@@ -261,6 +261,7 @@ execute if score on puzzle-on-off matches 1 run function mystery_9_wands:check_f
 
 ### Final boss start
 
+execute if score @p final_boss_movment matches 1 run tp @a -175 -60 164
 execute at @e[tag=final_boss,type=marker] if entity @p[distance=..3] run function mystery_9_wands:start_final_boss
 function mystery_9_wands:final_boss_bossbar
 

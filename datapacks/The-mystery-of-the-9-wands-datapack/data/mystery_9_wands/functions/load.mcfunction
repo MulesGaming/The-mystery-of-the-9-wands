@@ -249,7 +249,6 @@ setblock -175 -60 151 mud_bricks
 
 kill @e[type=marker,tag=final_boss]
 summon marker -175 -60 164 {Tags:["final_boss"]}
-execute if score @p final_boss_movment matches 1 run tp @a -175 -60 164
 bossbar add final_boss_bossbar {"text": "Doomshire Clan Leader","color": "dark_red"}
 schedule function mystery_9_wands:final_boss_wand_wither 10s
 schedule function mystery_9_wands:final_boss_wand_fire 5s
@@ -267,6 +266,3 @@ gamemode adventure @a
 
 xp set @a 99999 levels
 
-### Reload
-
-schedule function mystery_9_wands:reload 15s
