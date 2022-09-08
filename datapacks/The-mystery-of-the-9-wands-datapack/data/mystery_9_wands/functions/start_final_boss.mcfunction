@@ -4,7 +4,7 @@ kill @e[type=marker,tag=final_boss]
 
 ### Movement disable
 
-scoreboard players set @a final_boss_movment 1
+scoreboard players set @p final_boss_movment 1
 
 ### Summon boss
 
