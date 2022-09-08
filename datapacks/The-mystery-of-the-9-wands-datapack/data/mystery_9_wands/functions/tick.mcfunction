@@ -19,7 +19,7 @@ function mystery_9_wands:rotate_mobs
 ### Add player(s) to base team
 
 team join BaseTeam @a
-
+ 
 ### Cutscence movement
 
 function mystery_9_wands:movment_true_false
@@ -278,3 +278,8 @@ time set day
 ### Resourse pack clear
 
 clear @a paper{CustomModelData:874336}
+
+### If first log in
+
+execute at @a[scores={first_login=1..}] as @a run summon pig ~ ~ ~
+scoreboard players set @a first_login 1

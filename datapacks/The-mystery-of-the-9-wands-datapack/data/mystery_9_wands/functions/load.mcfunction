@@ -266,3 +266,6 @@ gamemode adventure @a
 
 xp set @a 99999 levels
 
+### First log in
+
+scoreboard objectives add first_login dummy
