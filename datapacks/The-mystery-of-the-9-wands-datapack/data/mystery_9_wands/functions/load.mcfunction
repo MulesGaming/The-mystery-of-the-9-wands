@@ -23,6 +23,7 @@ summon marker -12 -60 90 {Tags:["enter_office"]}
 
 scoreboard objectives add kill_self trigger
 scoreboard objectives add go_to_home trigger
+scoreboard objectives add cont_after_museum trigger
 
 ### Statue part count
 

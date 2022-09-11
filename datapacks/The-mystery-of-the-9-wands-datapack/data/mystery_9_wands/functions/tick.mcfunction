@@ -36,6 +36,11 @@ scoreboard players enable @a go_to_home
 execute as @a[scores={go_to_home=1..}] run tp @p 74 -58 -25
 execute as @a[scores={go_to_home=1..}] run scoreboard players set @s go_to_home 0
 
+### Museum trigger
+
+execute as @a[scores={cont_after_museum=1..}] run function mystery_9_wands:contune_story
+execute as @a[scores={cont_after_museum=1..}] run scoreboard players set @s cont_after_museum 0
+
 ### Check if player enter/exit
 
 execute at @e[type=marker,tag=exit_office] run teleport @a[distance=..2] -3 -57 83

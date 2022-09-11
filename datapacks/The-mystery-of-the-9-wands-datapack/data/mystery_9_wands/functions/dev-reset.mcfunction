@@ -17,3 +17,8 @@ reload
 ### Spwan 
 
 spawnpoint @a 74 -58 -24
+
+### Mailbox
+
+scoreboard players set message mail 0
+

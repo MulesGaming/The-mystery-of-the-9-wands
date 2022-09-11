@@ -34,3 +34,7 @@ spawnpoint @a 8 -57 132
 setblock 8 -57 140 barrel[facing=west]{Items:[{Slot:13b,id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Fang wand","color":"dark_purple","italic":false}',Lore:['{"text":"Right click to summon a wall of fangs in front of you.","color":"light_purple","italic":false}']},Unbreakable:1b,CustomModelData:2223,fangwand:1b}}]} destroy
 kill @e[type=item,nbt={Item:{id:"minecraft:barrel",Count:1b}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:2223,fangwand:1b}}}]
+
+### Trigger
+
+scoreboard players enable @a cont_after_museum
