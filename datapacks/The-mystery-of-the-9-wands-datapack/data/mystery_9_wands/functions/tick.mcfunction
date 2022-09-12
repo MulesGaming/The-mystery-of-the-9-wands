@@ -64,8 +64,8 @@ scoreboard players remove @a[scores={fang_wand=1..}] fang_wand 1
 
 ### Thiefery cutscence
 
-execute if block 8 -57 130 mangrove_door[open=true] run function mystery_9_wands:museum_thievery_cutscene_1
-execute if block 9 -57 130 mangrove_door[open=true] run function mystery_9_wands:museum_thievery_cutscene_1
+execute if block 8 -57 130 mangrove_door[open=true] run execute if score do start-thief-cut matches 1.. run function mystery_9_wands:museum_thievery_cutscene_1
+execute if block 8 -57 130 mangrove_door[open=true] run execute if score do start-thief-cut matches 1.. run function mystery_9_wands:museum_thievery_cutscene_1
 
 ### Sataration
 
@@ -73,7 +73,7 @@ effect give @a saturation 999999 99 true
 
 ### MCtransport employee
 
-execute at @e[type=villager,tag=mctransportemployee] as @a[distance=..3.5,tag=!mctransport_player] run scoreboard players set @a[distance=..4,tag=!mctransport_player] mctransport 1
+execute at @e[type=villager,tag=mctransportemployee] as @a[distance=..4.5,tag=!mctransport_player] run scoreboard players set @a[distance=..4,tag=!mctransport_player] mctransport 1
 tag @a[tag=mctransport_player] remove mctransport_player
 execute at @e[type=villager,tag=mctransportemployee] run tag @a[distance=..4] add mctransport_player
 

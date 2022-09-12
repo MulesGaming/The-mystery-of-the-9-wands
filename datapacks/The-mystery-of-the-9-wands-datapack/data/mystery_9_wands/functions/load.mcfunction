@@ -272,4 +272,7 @@ xp set @a 99999 levels
 scoreboard objectives add first-login dummy
 scoreboard players set @a first-login 1
 
+### Thiefery cut
 
+scoreboard objectives add start-thief-cut dummy
+execute unless score load start-thief-cut matches ..0 run scoreboard players set do start-thief-cut 1

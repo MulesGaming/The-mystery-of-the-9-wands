@@ -38,3 +38,8 @@ kill @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{Cust
 ### Trigger
 
 scoreboard players enable @a cont_after_museum
+
+### Stop do agian
+
+scoreboard players set do start-thief-cut 0
+scoreboard players set load start-thief-cut 0

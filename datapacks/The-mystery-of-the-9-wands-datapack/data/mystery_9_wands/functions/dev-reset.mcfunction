@@ -22,3 +22,7 @@ spawnpoint @a 74 -58 -24
 
 scoreboard players set message mail 0
 
+### Door
+
+scoreboard players set do start-thief-cut 1
+scoreboard players set load start-thief-cut 0
