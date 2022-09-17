@@ -18,6 +18,10 @@ reload
 
 spawnpoint @a 74 -58 -24
 
+### Close MCTransport
+
+function mystery_9_wands:closedmcransport
+
 ### Mailbox
 
 scoreboard players set message mail 0

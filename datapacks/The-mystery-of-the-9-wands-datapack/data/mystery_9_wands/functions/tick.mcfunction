@@ -41,6 +41,18 @@ execute as @a[scores={go_to_home=1..}] run scoreboard players set @s go_to_home 
 execute as @a[scores={cont_after_museum=1..}] run function mystery_9_wands:contune_story
 execute as @a[scores={cont_after_museum=1..}] run scoreboard players set @s cont_after_museum 0
 
+### Cave trigger
+
+execute as @a[scores={go_to_mine=1..}] run function mystery_9_wands:ride_to_mines
+execute as @a[scores={go_to_mine=1..}] run scoreboard players set @s go_to_mine 0
+scoreboard players enable @a go_to_mine
+
+### Swamp trigger
+
+execute as @a[scores={go_to_swamp=1..}] run function mystery_9_wands:ride_to_swamp
+execute as @a[scores={go_to_swamp=1..}] run scoreboard players set @s go_to_swamp 0
+scoreboard players enable @a go_to_swamp
+
 ### Check if player enter/exit
 
 execute at @e[type=marker,tag=exit_office] run teleport @a[distance=..2] -3 -57 83

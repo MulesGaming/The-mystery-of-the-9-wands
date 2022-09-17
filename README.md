@@ -1,4 +1,7 @@
+<!-- Badges -->
+
 [![GitHub release's](https://img.shields.io/github/release/MulesGaming/The-mystery-of-the-9-wands?include_prereleases=&sort=semver&color=FF0000)](https://github.com/MulesGaming/The-mystery-of-the-9-wands/releases/)
+[![The Mystery of the 9 Wands - Website](https://img.shields.io/badge/The_Mystery_of_the_9_Wands-Website-orange)](https://www.mulesgaming.com/projects/mystery-9-wands/the-mystery-9-wands)
 
 
 # ![alt text](https://www.mulesgaming.com/media/images/9_wands_icon.png)
