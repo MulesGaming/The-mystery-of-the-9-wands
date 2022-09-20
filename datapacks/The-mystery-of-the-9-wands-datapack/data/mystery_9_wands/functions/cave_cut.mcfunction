@@ -8,7 +8,7 @@ summon skeleton -34 -60 132 {Silent:1b,NoAI:1b,Invulnerable:1b,LeftHanded:1b,Can
 
 ### Talking
 
-tellraw @a ["","<",{"text":"Thief Leader","color":"gold"},"> ","You! ","They were suppose to stop you. ","No matter. The cave has a bomb in it. When it detonates you will die! MUHAHA"]
+tellraw @a ["","<",{"text":"Thief Leader","color":"gold"},"> ","You! ","They were suppose to stop you. ","You will never take my wand!"]
 
 ### Walk away
 
