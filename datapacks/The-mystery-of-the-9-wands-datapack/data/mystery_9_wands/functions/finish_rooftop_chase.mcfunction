@@ -23,3 +23,7 @@ kill @e[type=zombie,tag=ninjathief]
 ### Complete
 
 scoreboard players add do_final if_final 1
+
+### Stop doing agian
+
+scoreboard players set do rooftop-chase-have-done 1

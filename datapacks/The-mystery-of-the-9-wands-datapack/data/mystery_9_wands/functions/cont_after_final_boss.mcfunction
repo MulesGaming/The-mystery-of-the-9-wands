@@ -18,3 +18,9 @@ summon villager -4 -60 -6 {Silent:1b,Invulnerable:1b,CustomNameVisible:1b,Persis
 
 schedule function mystery_9_wands:cont_after_final_boss_2 5s
 
+### Wand
+
+clear @a carrot_on_a_stick{voidwand:1b}
+clear @a carrot_on_a_stick{firewand:1b}
+give @a carrot_on_a_stick{display:{Name:'{"text":"Void Wand","color":"black","italic":false}',Lore:['{"text":"Right click to give surrounding entity\'s withering.","color":"gray","italic":false}']},Unbreakable:1b,CustomModelData:1534853,voidwand:1b}
+give @a carrot_on_a_stick{display:{Name:'{"text":"Fire Wand","color":"#FF7700","italic":false}',Lore:['{"text":"Right click to make fire around you.","color":"gray","italic":false}']},Unbreakable:1b,CustomModelData:986694,firewand:1b}

@@ -161,6 +161,10 @@ scoreboard objectives add thief_victom dummy
 tp @e[type=zombie,tag=ninjathief] ~ ~-100 ~
 kill @e[type=zombie,tag=ninjathief]
 
+### Rooftop chase
+
+scoreboard objectives add rooftop-chase-have-done dummy
+
 ### Welcome message
 
 tellraw @a ["","Welcome to the mystery of the 9 wands!","\n",{"text":"Github","bold":true,"underlined":true,"color":"dark_gray","clickEvent":{"action":"open_url","value":"https://github.com/MulesGaming/The-mystery-of-the-9-wands"}}," ",{"text":"Website","bold":true,"underlined":true,"color":"dark_red","clickEvent":{"action":"open_url","value":"https://mulesgaming.com/projects/mystery-9-wands/the-mystery-9-wands"}}]
@@ -278,3 +282,7 @@ scoreboard players set @a first-login 1
 
 scoreboard objectives add start-thief-cut dummy
 execute unless score load start-thief-cut matches ..0 run scoreboard players set do start-thief-cut 1
+
+### Mine stop do-agian
+
+scoreboard objectives add mine-do dummy

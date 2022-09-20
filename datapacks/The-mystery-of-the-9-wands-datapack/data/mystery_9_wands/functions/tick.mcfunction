@@ -43,7 +43,8 @@ execute as @a[scores={cont_after_museum=1..}] run scoreboard players set @s cont
 
 ### Cave trigger
 
-execute as @a[scores={go_to_mine=1..}] run function mystery_9_wands:ride_to_mines
+execute as @a[scores={go_to_mine=1..}] if score do mine-do matches 0 run function mystery_9_wands:ride_to_mines
+execute as @a[scores={go_to_mine=1..}] if score do mine-do matches 1 run tellraw @a {"text": "You have allready been to the mine.", "color": "red"}
 execute as @a[scores={go_to_mine=1..}] run scoreboard players set @s go_to_mine 0
 scoreboard players enable @a go_to_mine
 

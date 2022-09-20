@@ -1,4 +1,4 @@
-### Remove froglight marker
+### Remove wool marker
 
 clear @a cyan_wool{continue_after_slime:1b}
 
@@ -17,10 +17,12 @@ setblock 139 -56 144 air replace
 setblock 139 -57 143 air replace
 setblock 139 -57 144 air replace
 
-### Location Compass
-
-item replace entity @p weapon.offhand with compass{display:{Name:'{"text":"Destination Compass","color":"white","italic":false}',Lore:['{"text":"This compass points towards your next destination","color":"yellow","italic":false}']},HideFlags:5,Unbreakable:1b,LodestoneDimension:"minecraft:overworld",LodestoneTracked:1b,LodestonePos:{X:15,Y:-50,Z:78}}
-
 ### Complete
 
 scoreboard players add do_final if_final 1
+
+### Wand
+
+clear @a carrot_on_a_stick{slimewand:1b}
+give @a carrot_on_a_stick{display:{Name:'{"text":"Slime Wand","color":"dark_green","italic":false}',Lore:['{"text":"Right click to summon 4 slimes that protect you.","color":"dark_purple","italic":false}']},Unbreakable:1b,CustomModelData:210465,slimewand:1b}
+

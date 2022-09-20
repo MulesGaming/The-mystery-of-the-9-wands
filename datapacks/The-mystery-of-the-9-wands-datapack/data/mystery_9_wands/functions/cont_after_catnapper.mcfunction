@@ -24,3 +24,7 @@ setblock -175 -59 144 air
 setblock -174 -59 148 air
 setblock -174 -59 148 air
 
+### Wand
+
+clear @a carrot_on_a_stick{catwand:1b}
+give @a carrot_on_a_stick{display:{Name:'{"text":"Cat wand","color":"light_purple","italic":false}',Lore:['{"text":"Right click to summon a cat and fish! ","italic":false}']},Unbreakable:1b,CustomModelData:2373578,catwand:1b}

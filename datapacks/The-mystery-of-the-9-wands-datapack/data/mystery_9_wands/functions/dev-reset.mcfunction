@@ -30,3 +30,19 @@ scoreboard players set message mail 0
 
 scoreboard players set do start-thief-cut 1
 scoreboard players set load start-thief-cut 0
+
+### Rooftop chase
+
+scoreboard players set do rooftop-chase-have-done 0
+
+### Clear 
+
+clear @a
+
+### Gamemode
+
+gamemode adventure @a
+
+### Mine
+
+scoreboard players set do mine-do 0

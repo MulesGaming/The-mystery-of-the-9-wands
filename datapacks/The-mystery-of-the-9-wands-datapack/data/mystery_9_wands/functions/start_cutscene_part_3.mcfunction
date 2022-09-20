@@ -23,7 +23,6 @@ spawnpoint @p -53 -57 81
 
 ### Give location compass & Sword. 
 
-item replace entity @p weapon.offhand with compass{display:{Name:'{"text":"Destination Compass","color":"white","italic":false}',Lore:['{"text":"This compass points towards your next destination","color":"yellow","italic":false}']},HideFlags:5,Unbreakable:1b,LodestoneDimension:"minecraft:overworld",LodestoneTracked:1b,LodestonePos:{X:8,Y:-60,Z:131}}
 item replace entity @p hotbar.0 with iron_sword{display:{Name:'{"text":"Old Sword","color":"dark_gray","italic":false}'},Unbreakable:1b}
 
 ### Restet
