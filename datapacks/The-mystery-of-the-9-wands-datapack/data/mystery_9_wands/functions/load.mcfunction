@@ -73,19 +73,6 @@ scoreboard objectives add cat_wand minecraft.used:minecraft.carrot_on_a_stick
 
 scoreboard objectives add mctransport dummy
 
-### Bomb
-
-setblock -23 -60 144 chest
-scoreboard objectives add bomb_menu dummy
-scoreboard objectives add bomb_code dummy
-function mystery_9_wands:bomb/menu/page0/items
-scoreboard players set is_correct_code bomb_code 0
-
-setblock -21 -59 143 stone
-setblock -21 -60 143 stone
-setblock -21 -59 144 stone
-setblock -21 -60 144 stone
-
 ### Miner
 
 scoreboard objectives add miner_npc dummy

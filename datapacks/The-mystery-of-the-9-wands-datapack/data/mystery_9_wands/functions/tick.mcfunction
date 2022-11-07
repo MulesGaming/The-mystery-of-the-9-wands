@@ -101,18 +101,12 @@ function mystery_9_wands:npc/mctransport
 execute as @a[nbt={RootVehicle:{Entity:{id:"minecraft:minecart"}}}] run setblock -20 -60 75 minecraft:redstone_block
 execute as @a[nbt={RootVehicle:{Entity:{id:"minecraft:minecart"}}}] run setblock -20 -59 80 minecraft:air
 
-### Bomb 
-
-execute as @a run function mystery_9_wands:bomb/menu/check
-function mystery_9_wands:bomb/code/is_correct_code
-
 ### Miner NPC
 
 execute at @e[type=zombie,tag=miner] as @a[distance=..3,tag=!miner_player] run scoreboard players set @a[distance=..3,tag=!miner_player] miner_npc 1
 tag @a[tag=miner_player] remove miner_player
 execute at @e[type=zombie,tag=miner] run tag @a[distance=..3] add miner_player
 function mystery_9_wands:npc/miner
-execute if score time bomb_timer matches 999999999 run scoreboard players set time bomb_timer 999999999
 
 ### Tp out of hole
 
