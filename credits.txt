@@ -1,13 +1,13 @@
 --- Credits --- 
 
--Mules Gaming - Developer: mulesgaming.github.io
+- Mules Gaming - Developer: mulesgaming.com
 
--Websites that helped with development:
+- Websites that helped with development:
 Vanilla Tweaks(Armor statues datapack): https://vanillatweaks.net/
 MCStacker: https://mcstacker.net/
 Minecraft Json: https://www.minecraftjson.com/
 
 - Mystery of the 9 Wands webstie(s):
 
-Website: https://mulesgaming.github.io/projects/mystery-9-wands/the-mystery-9-wands.html
+Website: https://mulesgaming.com/projects/mystery-9-wands/
 Github: https://github.com/MulesGaming/The-mystery-of-the-9-wands/
