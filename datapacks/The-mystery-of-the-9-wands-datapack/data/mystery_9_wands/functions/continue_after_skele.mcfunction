@@ -1,4 +1,3 @@
-
 ### Mail
 
 scoreboard players set message mail 1

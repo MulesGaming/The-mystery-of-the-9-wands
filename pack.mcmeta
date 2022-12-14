@@ -1,0 +1,16 @@
+{
+  "pack": {
+    "pack_format": 12,
+    "description": {
+      "text": "Resource Pack for ",
+      "color": "yellow",
+      "extra": [
+        {
+          "text": "The Mystery of the 9 wands!",
+          "color": "yellow",
+          "bold": true
+        }
+      ]
+    }
+  }
+}
