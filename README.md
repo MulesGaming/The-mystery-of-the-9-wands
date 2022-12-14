@@ -24,5 +24,5 @@ The Resource pack is biult in to the world files so when joining in singleplayer
 <a href='https://mulesgaming.github.io/projects/mystery-9-wands/'><img src='https://cdn-icons-png.flaticon.com/512/72/72626.png' width="150"></a>
 <a href='https://github.com/MulesGaming/The-mystery-of-the-9-wands'><img src='https://cryptodefinitions.com/wp-content/uploads/2020/09/GitHub-Logo.png' width="150"></a> 
 
-_Website Alt link:_ https://mulesgaming.com/projects/mystery-9-wands/
+_Website Alt link:_ https://mulesgaming.com/projects/mystery-9-wands/  
 _Github Alt link:_ https://github.com/MulesGaming/The-mystery-of-the-9-wands  
