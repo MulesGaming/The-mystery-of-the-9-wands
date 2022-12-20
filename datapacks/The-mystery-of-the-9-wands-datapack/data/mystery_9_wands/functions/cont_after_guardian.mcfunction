@@ -10,7 +10,3 @@ setblock -196 -63 85 water
 
 tellraw @a ["","I'll bet there's a passage through the water...","\n",{"text":"Tip:","bold":true,"color":"yellow"}," press the sprint button the swim when underwater."]
 
-### Wand
-
-clear @a carrot_on_a_stick{waterwand:1b}
-
