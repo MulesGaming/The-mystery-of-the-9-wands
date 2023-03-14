@@ -12,11 +12,11 @@
   
 -----**Version Info**-----  
 
-  The map can **theoretically** be used in any Minecraft version 1.13+, **BUT** the Map was desiged and tested for versions 1.19.3 and I recommend using 1.19.3.
+  The map can **theoretically** be used in any Minecraft version 1.13+, **BUT** the Map was desiged and tested for versions 1.19.3 and I recommend using 1.19.4.
 
 -----**Resource pack info**-----  
 
-The Resource pack is biult in to the world files so when joining in singleplayer on 1.19.x it will load it's self. When joining on a Realm or a verion thats not 1.19.3 version you will have to install the Resource pack manualy. You can download it from releases section of the Github page( github.com/MulesGaming/The-mystery-of-the-9-wands/releases ), select the most resent version, and under the _assets_ section download and open _The-mystery-of-the-9-wands-rp.zip_. Now pause minecraft, go to Resource packs, and select open pack folder. Now drag the _The mystery of the 9 wands Resource pack_ folder into your resourse pack folder. Now in Minecraft hover over the pack, click the play button, then done. When joining a sever you need to add the resource pack to the _server.properties file. More info can be found here:
+The Resource pack is biult in to the world files so when joining in singleplayer on 1.19.x it will load it's self. When joining on a Realm or a verion thats not 1.19.4 version you will have to install the Resource pack manualy. You can download it from releases section of the Github page( github.com/MulesGaming/The-mystery-of-the-9-wands/releases ), select the most resent version, and under the _assets_ section download and open _The-mystery-of-the-9-wands-rp.zip_. Now pause minecraft, go to Resource packs, and select open pack folder. Now drag the _The mystery of the 9 wands Resource pack_ folder into your resourse pack folder. Now in Minecraft hover over the pack, click the play button, then done. When joining a sever you need to add the resource pack to the _server.properties file. More info can be found here:
 [nodecraft.com/support/games/minecraft/adding-a-resource-pack-to-a-minecraft-server.](https://nodecraft.com/support/games/minecraft/adding-a-resource-pack-to-a-minecraft-server)
 
 -----**Links**-----  

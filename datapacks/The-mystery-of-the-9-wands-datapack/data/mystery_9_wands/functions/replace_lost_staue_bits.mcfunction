@@ -1,15 +1,30 @@
-### Replace buttons
+### Summon block displays
 
-setblock -12 -59 114 stone_button[facing=north] replace
-setblock 3 -58 116 stone_button[facing=west] replace
-setblock -9 -57 120 stone_button[facing=east] replace
-setblock 1 -57 123 stone_button[facing=west,face=floor] replace
+kill @e[type=block_display,tag=statue-bit-display-1]
+kill @e[type=block_display,tag=statue-bit-display-2]
+kill @e[type=block_display,tag=statue-bit-display-3]
+kill @e[type=block_display,tag=statue-bit-display-4]
 
-### Replace item frames.
-summon item_frame -12 -59 114 {Facing:2b,Invulnerable:1b,Invisible:1b,Tags:["statureparts1"],Item:{id:"minecraft:gold_block",Count:1b,tag:{display:{Name:'{"text":"Lost statue bit","italic":false}'}}}}
-summon item_frame 3 -58 116 {Facing:4b,Invulnerable:1b,Invisible:1b,Tags:["statureparts2"],Item:{id:"minecraft:gold_block",Count:1b,tag:{display:{Name:'{"text":"Lost statue bit","italic":false}'}}}}
-summon item_frame -9 -57 120 {Facing:5b,Invulnerable:1b,Invisible:1b,Tags:["statureparts3"],Item:{id:"minecraft:gold_block",Count:1b,tag:{display:{Name:'{"text":"Lost statue bit","italic":false}'}}}}
-summon item_frame 1 -57 123 {Facing:1b,Invulnerable:1b,Invisible:1b,Tags:["statureparts4"],Item:{id:"minecraft:gold_block",Count:1b,tag:{display:{Name:'{"text":"Lost statue bit","italic":false}'}}}}
+execute unless entity @e[type=block_display,tag=statue-bit-display-1] run summon block_display -11.7 -58.7 114.6 {billboard:"fixed",Tags:["statue-bit-display-1"],block_state:{Name:"minecraft:gold_block"}}
+execute unless entity @e[type=block_display,tag=statue-bit-display-2] run summon block_display -9.0 -56.7 120.35 {billboard:"fixed",Tags:["statue-bit-display-2"],block_state:{Name:"minecraft:gold_block"}}
+execute unless entity @e[type=block_display,tag=statue-bit-display-3] run summon block_display 3.6 -57.7 116.32 {billboard:"fixed",Tags:["statue-bit-display-3"],block_state:{Name:"minecraft:gold_block"}}
+execute unless entity @e[type=block_display,tag=statue-bit-display-4] run summon block_display 1.3 -57 123.4 {billboard:"fixed",Tags:["statue-bit-display-4"],block_state:{Name:"minecraft:gold_block"}}
+
+### Modify data to shrink
+
+data merge entity @e[type=block_display,tag=statue-bit-display-1,limit=1] {billboard:"fixed",Tags:["statue-bit-display-1"],transformation:{scale:[0.4f,0.4f,0.4f]},block_state:{Name:"minecraft:gold_block"}}
+data merge entity @e[type=block_display,tag=statue-bit-display-2,limit=1] {billboard:"fixed",Tags:["statue-bit-display-2"],transformation:{scale:[0.4f,0.4f,0.4f]},block_state:{Name:"minecraft:gold_block"}}
+data merge entity @e[type=block_display,tag=statue-bit-display-3,limit=1] {billboard:"fixed",Tags:["statue-bit-display-3"],transformation:{scale:[0.4f,0.4f,0.4f]},block_state:{Name:"minecraft:gold_block"}}
+data merge entity @e[type=block_display,tag=statue-bit-display-4,limit=1] {billboard:"fixed",Tags:["statue-bit-display-4"],transformation:{scale:[0.4f,0.4f,0.4f]},block_state:{Name:"minecraft:gold_block"}}
+
+### Summon interaction entitys
+
+kill @e[type=interaction,tag=lost-satue-bit-trigger]
+
+execute at @e[type=block_display,tag=statue-bit-display-1] run summon minecraft:interaction ~ ~ ~ {Tags: ["lost-satue-bit-trigger"]}
+execute at @e[type=block_display,tag=statue-bit-display-2] run summon minecraft:interaction ~ ~ ~ {Tags: ["lost-satue-bit-trigger"]}
+execute at @e[type=block_display,tag=statue-bit-display-3] run summon minecraft:interaction ~ ~ ~ {Tags: ["lost-satue-bit-trigger"]}
+execute at @e[type=block_display,tag=statue-bit-display-4] run summon minecraft:interaction ~ ~ ~ {Tags: ["lost-satue-bit-trigger"]}
 
 ### Reset players
 

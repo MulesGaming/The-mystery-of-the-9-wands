@@ -115,8 +115,11 @@ summon marker 165 -49 144 {Tags:["sewer_manhole_exit"]}
 ####summon zombie -26 -60 143 {Silent:1b,Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,Tags:["miner"],CustomName:'{"text":"Miner","color":"gold","italic":false}',ArmorItems:[{},{},{},{id:"minecraft:carved_pumpkin",Count:1b,tag:{CustomModelData:2743753}}],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:2000000000,ShowParticles:0b}]}
 
 #### Sewer worker
-kill @e[type=villager,tag=sewer_npc]
-summon villager 5.2 -60 110.6 {Silent:1b,Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,Health:1f,Rotation:[-180F,0F],Tags:["sewer_npc"],CustomName:'{"text":"Sewer Worker","italic":false}',ArmorItems:[{},{},{},{id:"minecraft:carved_pumpkin",Count:1b,tag:{Unbreakable:1b,CustomModelData:2363427}}],ActiveEffects:[{Id:14,Amplifier:1b,Duration:999999,ShowParticles:0b}],Attributes:[{Name:"generic.max_health",Base:1}]}
+
+kill @e[type=item_display,tag=sewer_npc]
+#kill @e[type=villager,tag=sewer_npc]
+#summon villager 5.2 -60 110.6 {Silent:1b,Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,Health:1f,Rotation:[-180F,0F],Tags:["sewer_npc"],CustomName:'{"text":"Sewer Worker","italic":false}',ArmorItems:[{},{},{},{id:"minecraft:carved_pumpkin",Count:1b,tag:{Unbreakable:1b,CustomModelData:2363427}}],ActiveEffects:[{Id:14,Amplifier:1b,Duration:999999,ShowParticles:0b}],Attributes:[{Name:"generic.max_health",Base:1}]}
+summon item_display 5.2 -57.5 110.6 {billboard:"vertical",interpolation_start:-1,interpolation_duration:0,item_display:"head",Tags:["sewer_npc"],item:{id:"minecraft:carved_pumpkin",Count:1b,tag:{CustomModelData:2363427}},transformation:[-0.75f,0f,9.184850993605148e-17f,-0.375f,0f,0.75f,0f,-0.375f,-9.184850993605148e-17f,0f,-0.75f,-0.375f,0f,0f,0f,1f]}
 
 setblock 139 -58 143 stone_bricks
 setblock 139 -58 144 stone_bricks
@@ -154,10 +157,11 @@ scoreboard objectives add rooftop-chase-have-done dummy
 
 ### Welcome message
 
-tellraw @a ["","Welcome to the mystery of the 9 wands!","\n",{"text":"Github","bold":true,"underlined":true,"color":"dark_gray","clickEvent":{"action":"open_url","value":"https://github.com/MulesGaming/The-mystery-of-the-9-wands"}}," ",{"text":"Website","bold":true,"underlined":true,"color":"dark_red","clickEvent":{"action":"open_url","value":"https://mulesgaming.com/projects/mystery-9-wands/the-mystery-9-wands"}}]
+tellraw @a ["","Welcome to the mystery of the 9 wands!","\n",{"text":"Github","bold":true,"underlined":true,"color":"dark_gray","clickEvent":{"action":"open_url","value":"https://github.com/MulesGaming/The-mystery-of-the-9-wands"}}," ",{"text":"Website","bold":true,"underlined":true,"color":"dark_red","clickEvent":{"action":"open_url","value":"https://mulesgaming.com/projects/mystery-9-wands/"}}]
 
-### Replace artifacs
+### Make lost statue bit
 
+scoreboard objectives add statue-bit-trigger-counter dummy
 function mystery_9_wands:replace_lost_staue_bits
 
 ### If do Final

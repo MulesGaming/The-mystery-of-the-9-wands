@@ -36,6 +36,12 @@ scoreboard players enable @a go_to_home
 execute as @a[scores={go_to_home=1..}] run tp @p 74 -58 -25
 execute as @a[scores={go_to_home=1..}] run scoreboard players set @s go_to_home 0
 
+### Lost statue bit trigger detection
+
+execute as @e[type=minecraft:interaction,tag=lost-satue-bit-trigger] store result score @s statue-bit-trigger-counter run data get entity @s interaction.timestamp 1
+execute as @e[type=minecraft:interaction,tag=lost-satue-bit-trigger,scores={statue-bit-trigger-counter=1..}] at @s run function mystery_9_wands:activate-statue-bit
+execute as @e[type=minecraft:interaction,tag=lost-satue-bit-trigger,scores={statue-bit-trigger-counter=1..}] run data merge entity @s {interaction:{timestamp:0L}}
+
 ### Museum trigger
 
 execute as @a[scores={cont_after_museum=1..}] run function mystery_9_wands:contune_story
@@ -56,8 +62,8 @@ scoreboard players enable @a go_to_swamp
 
 ### Check if player enter/exit
 
-execute at @e[type=marker,tag=exit_office] run teleport @a[distance=..2] -3 -57 83
-execute at @e[type=marker,tag=enter_office] run teleport @a[distance=..2] -52 -57 92
+execute at @e[type=marker,tag=exit_office] run tp @a[distance=..2] -3 -57 83
+execute at @e[type=marker,tag=enter_office] run tp @a[distance=..2] -52 -58 89
 
 ### If dead
 
@@ -82,7 +88,7 @@ execute if block 9 -57 130 mangrove_door[open=true] run execute if score do star
 
 ### Sataration
 
-effect give @a saturation 999999 99 true
+effect give @a saturation infinite 99 true
 
 ### MCtransport employee
 
@@ -127,7 +133,7 @@ execute if score @p cont_after_thief_skeley matches 1.. run function mystery_9_w
 
 ### Sewer text
 
-execute if score open sewer matches 0 run function mystery_9_wands:npc/sewer_npc_before
+execute if score open sewer matches ..0 run function mystery_9_wands:npc/sewer_npc_before
 execute if score open sewer matches 1.. run function mystery_9_wands:npc/sewer_npc_after
 
 ### Orb wand right click

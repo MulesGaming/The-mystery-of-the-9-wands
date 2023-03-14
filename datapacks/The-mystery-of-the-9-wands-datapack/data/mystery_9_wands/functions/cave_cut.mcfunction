@@ -14,11 +14,7 @@ tellraw @a ["","<",{"text":"Thief Leader","color":"gold"},"> ","You! ","They wer
 
 setblock -34 -62 132 purpur_stairs[facing=south,half=bottom,shape=straight] replace
 
-### Destanation Commpass
-
-item replace entity @p weapon.offhand with compass{display:{Name:'{"text":"Destination Compass","color":"white","italic":false}',Lore:['{"text":"This compass points towards your next destination","color":"yellow","italic":false}']},HideFlags:5,Unbreakable:1b,LodestoneDimension:"minecraft:overworld",LodestoneTracked:1b,LodestonePos:{X:-23,Y:-62,Z:145}}
-
-### End Cutscenc
+### End Cutscene
 
 schedule function mystery_9_wands:kill_cave_skely 7s
 

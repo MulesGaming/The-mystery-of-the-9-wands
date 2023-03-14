@@ -21,10 +21,6 @@ scoreboard players set @p cutscence_movment 0
 tellraw @p {"text":"Checkpoint!","color":"green"}
 spawnpoint @p -53 -57 81
 
-### Give location compass & Sword. 
-
-item replace entity @p hotbar.0 with iron_sword{display:{Name:'{"text":"Old Sword","color":"dark_gray","italic":false}'},Unbreakable:1b}
-
 ### Restet
 function mystery_9_wands:closedmcransport
 scoreboard players set open sewer 0
